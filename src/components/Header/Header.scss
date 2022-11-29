@@ -1,0 +1,21 @@
+header {
+    background-color: rgb(114, 43, 72);
+    color: rgb(219, 224, 236);
+    padding: 5px;
+    nav {
+        display: flex;
+        justify-content: space-around;
+
+        a {
+            all: unset;
+        }
+
+        div {
+            color: rgb(219, 224, 236);
+            display: flex;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+    }
+}
