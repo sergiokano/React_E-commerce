@@ -17,6 +17,7 @@ const Login = () => {
       navigate("/profile")
     }
 }, [login])
+
   return (
     <div className="container">
       <h3>Login</h3>
