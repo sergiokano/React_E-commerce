@@ -1,13 +1,19 @@
 const users = (state, action) => {
-    switch (action.type){
+    switch (action.type) {
         case "LOGIN":
-            return{
-                ...state, 
+            return {
+                ...state,
                 token: action.payload.token
             }
-            default:
-                return state
-    }
-}
+            case "GET_USER_INFO":
+        return {
+            ...state,
+            user: action.payload,
+        }
+        default:
+            return state
+    };
+};
+
 
 export default users
