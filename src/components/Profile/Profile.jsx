@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { UserContext } from "../../context/UserContext/UserState";
-import { Spin } from 'antd';
-import { Card } from 'antd';
+import { Spin, Card  } from 'antd';
+import { PhoneOutlined, MailOutlined, TagOutlined } from "@ant-design/icons";
 
 const Profile = () => {
   const { user, getUserInfo } = useContext(UserContext);
@@ -24,9 +24,9 @@ const Profile = () => {
         width: 300,
       }}
     >
-      <p> Email: {user.email}</p>
-      <p>Phone number: {user.phone}</p>
-      <p>Adsress: {user.address}</p>
+      <p> <MailOutlined /> {user.email}</p>
+      <p><PhoneOutlined /> {user.phone}</p>
+      <p><TagOutlined /> {user.address}</p>
     </Card>
         </div>
    }
