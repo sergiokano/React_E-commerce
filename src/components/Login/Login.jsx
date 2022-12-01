@@ -1,82 +1,80 @@
-import React, { useEffect, useState } from 'react'
-// import { useNavigate } from 'react-router-dom'
+import React, { useContext, useEffect } from "react";
+import { Button, Form, Input } from "antd";
+import { UserContext } from "../../context/UserContext/UserState";
+import "./Login.scss";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-    // let navigate = useNavigate()
-    const [btnDisable, setBtnDisable] = useState(true)
-    const [message, setMessage] = useState("")
-    const [visible, setVisible] = useState(true)
-    const [data, setData] = useState({
-        email: "",
-        password: "",
-    })
-    const initialState = {
-        email: "",
-        password: "",
+  const { login } = useContext(UserContext);
+  const navigate = useNavigate();
+  const onFinish = (values) => {
+    login(values);
+  };
+
+  useEffect(() => {
+      const foundToken = JSON.parse(localStorage.getItem("token"));
+      if (foundToken) {
+      navigate("/profile")
     }
+}, [login])
 
-    const clearState = () => {
-        setData({ ...initialState })
-    }
+  return (
+    <div className="container">
+      <h3>Login</h3>
+      <Form
+        name="basic"
+        labelCol={{
+          span: 8,
+        }}
+        wrapperCol={{
+          span: 16,
+        }}
+        initialValues={{
+          remember: true,
+        }}
+        onFinish={onFinish}
+        autoComplete="off"
+      >
+        <Form.Item
+          label="Email"
+          name="email"
+          rules={[
+            {
+              required: true,
+              type: "email",
+              message: "Please input your email!",
+            },
+          ]}
+        >
+          <Input />
+        </Form.Item>
 
+        <Form.Item
+          label="Password"
+          name="password"
+          rules={[
+            {
+              required: true,
+              message: "Please input your password!",
+            },
+          ]}
+        >
+          <Input.Password />
+        </Form.Item>
 
-    useEffect(() => {
-        if (data.email.length < 1 || data.password.length < 1) {
-            setMessage("All gaps must be filled to log in")
-            setBtnDisable(true)
-        } else {
-            setMessage(null)
-            setBtnDisable(false)
-        }
-    }, [data]);
+        <Form.Item
+          wrapperCol={{
+            offset: 8,
+            span: 16,
+          }}
+        >
+          <Button type="primary" htmlType="submit">
+            Submit
+          </Button>
+        </Form.Item>
+      </Form>
+    </div>
+  );
+};
 
-    const handleInputChange = (e) => {
-        setData({
-            ...data,
-            [e.target.name]: e.target.value,
-        })
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("Data" + data.email + " " + data.password)
-        localStorage.setItem("data", JSON.stringify(data))
-        clearState()
-        // setTimeout(() => {
-        //     navigate("/profile")
-        // }), 3000;
-        setVisible(false)
-    }
-
-    return (
-        <div>
-            <br />
-            <span> Please, fill the gaps to log in</span>
-            <br />
-            <br />
-            <form onSubmit={handleSubmit}>
-                <input type="text"
-                    placeholder='Insert your email'
-                    onChange={handleInputChange}
-                    name="email"
-                />
-                <br />
-                <br />
-                <input type="text"
-                    placeholder='Insert your password'
-                    onChange={handleInputChange}
-                    name="password"
-                />
-                <br />
-                <br />
-                <button type="submit" disabled={btnDisable}>
-                    Let's go!
-                </button>
-            </form>
-            <p>{visible ? message : <>Succesfully loged. Redirecting <i>Profile</i> </>}
-            </p>
-        </div>
-    )
-}
-
-export default Login
+export default Login;

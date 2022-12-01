@@ -5,7 +5,7 @@ const Home = () => {
         <div className='home'>
 
             <br />
-            <p>Welcome to <strong>Canos'metics</strong>, where you will find the latest cruelty free cosmetics on demand.
+            <p>Welcome to <strong>Cano'smetics</strong>, where you will find the latest cruelty free cosmetics on demand.
                 <br />
                 <br />
                 ~ Facial cream
