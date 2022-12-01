@@ -8,12 +8,14 @@ import Register from './components/Register/Register';
 import Profile from './components/Profile/Profile';
 import { UserProvider } from './context/UserContext/UserState';
 import Footer from "./components/Footer/Footer";
+import { OrderProvider } from './context/OrdersContext/OrderState';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
       <UserProvider>
+      <OrderProvider>
         <Header />
         <Routes>
           <Route path='/' element={<Home />}/>
@@ -21,6 +23,7 @@ function App() {
           <Route path='/register' element={<Register />}/>
           <Route path='/profile' element={<Profile />}/>
       </Routes>
+      </OrderProvider>
       </UserProvider>
       <Footer />
       </BrowserRouter>
