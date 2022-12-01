@@ -3,10 +3,10 @@ const products = (state, action) => {
     case "GET_PRODUCTS":
       return {
         ...state,
-        tasks: action.payload,
+        products: action.payload,
       };
     default:
       return state;
   }
 };
-export default tasks;
+export default products;

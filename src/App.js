@@ -8,23 +8,24 @@ import Register from "./components/Register/Register";
 import Profile from "./components/Profile/Profile";
 import Footer from "./components/Footer/Footer";
 import Products from "./components/Products/Products";
-import { GlobalProvider } from "./context/GlobalState";
+import { ProductsProvider } from "./context/ProductsContext/ProductsState";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <GlobalProvider>
-        <Header />
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/profile" element={<Profile />} />
-        </Routes>
-        <Products />
-        <Footer />
-        </GlobalProvider>
+          <ProductsProvider>
+            <Header />
+            <Routes>
+              <Route path="/home" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/products" element={<Products />} />
+
+            </Routes>
+            <Footer />
+          </ProductsProvider>
       </BrowserRouter>
     </div>
   );
