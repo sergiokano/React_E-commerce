@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Menu } from "antd";
-import { HomeOutlined, UserOutlined, UserAddOutlined, LogoutOutlined, LoginOutlined } from "@ant-design/icons";
+import { HomeOutlined, UserOutlined, UserAddOutlined, LogoutOutlined, LoginOutlined, ShopOutlined } from "@ant-design/icons";
 // import './Header.scss'
 import { UserContext } from "../../context/UserContext/UserState";
 
@@ -16,6 +16,9 @@ const Header = () => {
         <Menu mode="horizontal" defaultSelectedKeys={["home"]}>
           <Menu.Item key="home" icon={<HomeOutlined />}>
             <Link to="/">Home</Link>
+          </Menu.Item>
+          <Menu.Item key="products" icon={<ShopOutlined />}>
+            <Link to="/products">Products</Link>
           </Menu.Item>
           <Menu.Item key="register" icon={<UserAddOutlined />}>
               <Link to="/register">Register</Link>
