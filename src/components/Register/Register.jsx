@@ -8,14 +8,10 @@ const {register} = useContext(UserContext)
 const navigate = useNavigate()
 const onFinish = (values) =>{
     register(values)
+    navigate("/login")
 }
 
-//  useEffect(() => {
-//     const foundToken = JSON.parse(localStorage.getItem("token"));
-//       if (foundToken){
-//       navigate("/login")
-//     }
-//  }, [register])
+
     
   return (
     <div>
