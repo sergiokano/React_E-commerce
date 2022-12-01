@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { Menu } from "antd";
 import { HomeOutlined, UserOutlined, UserAddOutlined, LogoutOutlined, LoginOutlined, ShopOutlined } from "@ant-design/icons";
 import { UserContext } from "../../context/UserContext/UserState";
+import "./Header.scss";
+
 
 const Header = () => {
     const {token, logout} = useContext(UserContext)
@@ -13,6 +15,7 @@ const Header = () => {
     }
     console.log("token",token)
     return (
+        <div className="container-home">
         <Menu mode="horizontal" defaultSelectedKeys={["home"]}>
           <Menu.Item key="home" icon={<HomeOutlined />}>
             <Link to="/">Home</Link>
@@ -39,6 +42,7 @@ const Header = () => {
             
           )}
         </Menu>
+        </div>
       );
     };
     
