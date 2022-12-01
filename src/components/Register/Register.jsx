@@ -2,38 +2,35 @@ import React, { useContext, useEffect } from 'react'
 import { Button, Form, Input } from "antd";
 import { useNavigate } from 'react-router-dom'
 import { UserContext } from '../../context/UserContext/UserState'
+import "./Register.scss"
 
 const Register = () => {
 const {register} = useContext(UserContext)
 const navigate = useNavigate()
 const onFinish = (values) =>{
     register(values)
+    navigate("/login")
 }
 
-//  useEffect(() => {
-//     const foundToken = JSON.parse(localStorage.getItem("token"));
-//       if (foundToken){
-//       navigate("/login")
-//     }
-//  }, [register])
+
     
   return (
-    <div>
-        <h3>Register</h3>
+    <div className="container-register">
         <Form
         name="basic"
         labelCol={{
-          span: 8,
+            span: 8,
         }}
         wrapperCol={{
-          span: 16,
+            span: 16,
         }}
         initialValues={{
-          remember: true,
+            remember: true,
         }}
         onFinish={onFinish}
         autoComplete="off"
-      >
+        >
+          <p>Create a new user</p>
         <Form.Item
           label="Name"
           name="name"
@@ -109,6 +106,7 @@ const onFinish = (values) =>{
             offset: 8,
             span: 16,
           }}
+          className="button-container"
         >
           <Button type="primary" htmlType="submit">
             Submit

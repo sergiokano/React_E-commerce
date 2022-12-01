@@ -1,13 +1,13 @@
-.container-login{
+.container-register{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     form{
-        p{
-          text-align: center;
-        }
+      p{
+        text-align: center;
       }
+    }
 }
 .button-container{
     display: flex;

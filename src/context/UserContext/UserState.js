@@ -59,6 +59,10 @@ export const UserProvider = ({ children }) => {
         }
     }
 
+    const register = async (user) =>{
+        const res = await axios.post(API_URL + "/users/create",user)
+    }
+
     return (
         <UserContext.Provider
             value={{
@@ -66,7 +70,8 @@ export const UserProvider = ({ children }) => {
                 user: state.user,
                 login,
                 getUserInfo,
-                logout
+                logout,
+                register
             }}>
             {children}
         </UserContext.Provider>

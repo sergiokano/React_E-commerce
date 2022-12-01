@@ -2,8 +2,9 @@ import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Menu } from "antd";
 import { HomeOutlined, UserOutlined, UserAddOutlined, LogoutOutlined, LoginOutlined, ShopOutlined } from "@ant-design/icons";
-// import './Header.scss'
 import { UserContext } from "../../context/UserContext/UserState";
+import "./Header.scss";
+
 
 const Header = () => {
     const {token, logout} = useContext(UserContext)
@@ -12,7 +13,9 @@ const Header = () => {
         logout()
         navigate("/")
     }
+    console.log("token",token)
     return (
+        <div className="container-home">
         <Menu mode="horizontal" defaultSelectedKeys={["home"]}>
           <Menu.Item key="home" icon={<HomeOutlined />}>
             <Link to="/">Home</Link>
@@ -29,7 +32,7 @@ const Header = () => {
                 <Link to="/profile">Profile</Link>
               </Menu.Item>
               <Menu.Item key="logout" icon={<LogoutOutlined />} onClick={onLogout}>
-                <Link to="/logout">Logout</Link>
+                <Link to="/">Logout</Link>
               </Menu.Item>
             </>
           )  : (
@@ -39,6 +42,7 @@ const Header = () => {
             
           )}
         </Menu>
+        </div>
       );
     };
     
