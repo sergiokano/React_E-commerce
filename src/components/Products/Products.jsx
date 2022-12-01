@@ -1,15 +1,17 @@
 import React, { useContext, useEffect } from "react";
 import { ProductsContext } from "../../context/ProductsContext/ProductsState";
-// import Product from "./Product/Product";
-import { Card } from "antd";
+import { Card, Button } from "antd";
 // import "./Products.css";
-// import { ShoppingCartOutlined } from "@ant-design/icons";
+import { ShoppingCartOutlined } from "@ant-design/icons";
 
 const Products = () => {
-  const { products, getProducts } = useContext(ProductsContext);
+  const { products, getProducts, addCart, cart } = useContext(ProductsContext);
   useEffect(() => {
     getProducts();
   }, []);
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   return (
     <div className="container-products">
@@ -26,7 +28,9 @@ const Products = () => {
               }}
             >
               <p>{product.price} €</p>
-             
+              <Button onClick={() => addCart(product)}>
+                Add Cart <ShoppingCartOutlined />
+              </Button>
             </Card>
           </div>
         );
