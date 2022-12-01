@@ -10,11 +10,13 @@ import { UserProvider } from './context/UserContext/UserState';
 import Footer from "./components/Footer/Footer";
 import Products from "./components/Products/Products";
 import { ProductsProvider } from "./context/ProductsContext/ProductsState";
+import { OrderProvider } from './context/OrdersContext/OrderState';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <OrderProvider>
         <Header />
         <ProductsProvider>
         <UserProvider>
@@ -25,6 +27,7 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path='/profile' element={<Profile />}/>
       </Routes>
+      </OrderProvider>
       </UserProvider>
       </ProductsProvider>
       <Footer />
