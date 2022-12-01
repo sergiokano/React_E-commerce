@@ -11,7 +11,7 @@ const Profile = () => {
   }, []);
 
   return (
-    <div>
+    <div className="container-profile">
       <p>Your profile</p>
       {!user ? 
       <Spin size="large" />: 
@@ -24,9 +24,9 @@ const Profile = () => {
         width: 300,
       }}
     >
-      <p> {user.email}</p>
-      <p>Card content</p>
-      <p>Card content</p>
+      <p> Email: {user.email}</p>
+      <p>Phone number: {user.phone}</p>
+      <p>Adsress: {user.address}</p>
     </Card>
         </div>
    }
