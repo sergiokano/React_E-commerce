@@ -19,22 +19,22 @@ const Login = () => {
 }, [login])
 
   return (
-    <div className="container">
-      <h3>Login</h3>
+    <div className="container-login">
       <Form
         name="basic"
         labelCol={{
-          span: 8,
+            span: 8,
         }}
         wrapperCol={{
-          span: 16,
+            span: 16,
         }}
         initialValues={{
-          remember: true,
+            remember: true,
         }}
         onFinish={onFinish}
         autoComplete="off"
-      >
+        >
+        <p>Log in to see your account</p>
         <Form.Item
           label="Email"
           name="email"
