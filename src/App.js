@@ -16,10 +16,10 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <OrderProvider>
         <Header />
         <ProductsProvider>
         <UserProvider>
+        <OrderProvider>
         <Routes>
           <Route path='/home' element={<Home />}/>
           <Route path='/login' element={<Login />}/>
