@@ -38,9 +38,10 @@ export const ProductsProvider = ({ children }) => {
     <ProductsContext.Provider
       value={{
         products: state.products,
+        cart:state.cart,
         getProducts,
         addCart,
-        clearCart
+        clearCart,
       }}
     >
       {children}

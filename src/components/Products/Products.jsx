@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from "react";
 import { ProductsContext } from "../../context/ProductsContext/ProductsState";
-// import Product from "./Product/Product";
 import { Card, Button } from "antd";
 // import "./Products.css";
 import { ShoppingCartOutlined } from "@ant-design/icons";
