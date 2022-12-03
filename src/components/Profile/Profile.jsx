@@ -26,7 +26,7 @@ const Profile = () => {
         border: "1px solid lightGray"
       }}
     >
-      <p> <MailOutlined /> {user.email}</p>
+      <p><MailOutlined /> {user.email}</p>
       <p><PhoneOutlined /> {user.phone}</p>
       <p><TagOutlined /> {user.address}</p>
     </Card>

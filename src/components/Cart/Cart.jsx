@@ -4,7 +4,7 @@ import { OrdersContext } from "../../context/OrdersContext/OrderState";import { 
 import { ProductsContext } from "../../context/ProductsContext/ProductsState";
 
 const Cart = () =>{
-const {cart, clearCart} = useContext(ProductsContext)
+const {cart, clearCart  } = useContext(ProductsContext)
 const {createOrder} = useContext(OrdersContext)
 const cartNames = cart.map((cartItem) => cartItem.name)
 const createNewOrder = ()=>{
@@ -24,7 +24,7 @@ return(
         footer={
           <div>
             <Button onClick={clearCart}>Clear Cart</Button>
-            <Button onClick={createNewOrder}>Buy <ShoppingOutlined /></Button>
+            <Button onClick={() => createNewOrder()}>Buy <ShoppingOutlined /></Button>
           </div>
         }
         bordered
