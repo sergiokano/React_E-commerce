@@ -17,8 +17,42 @@ const Header = () => {
         navigate("/")
     }
     return (
-        <div className="container-home">
-        <Menu mode="horizontal" defaultSelectedKeys={["home"]}>
+        <div className="container-header">
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/products">
+                  Products
+                </Link>
+              </li>
+              <li>
+                <Link to="/cart">
+                  Cart
+                </Link>
+              </li>
+              <li>
+                <Link to="/register">
+                  Sign Up
+                </Link>
+              </li>
+              <li>
+                <Link to="/login">
+                  Login
+                </Link>
+              </li>
+            </ul>
+            <div className="container-header_right">
+
+            </div>
+          </nav>
+
+
+        {/* <Menu mode="horizontal" defaultSelectedKeys={["home"]}>
           <Menu.Item key="home" icon={<HomeOutlined />}>
             <Link to="/">Home</Link>
           </Menu.Item>
@@ -51,7 +85,7 @@ const Header = () => {
             </Menu.Item>
             
           )}
-        </Menu>
+        </Menu> */}
         </div>
       );
     };

@@ -1,0 +1,19 @@
+@import "//db.onlinewebfonts.com/c/23255fa3ff7a89589800cea3092f154f?family=NB+International";
+
+// OPTION 1 ///////////////////////////////////////////////////////////////////////////////////////////////////
+$font-text: "NB International";
+$color-text: rgb(255, 255, 255);
+
+$background-gradient: linear-gradient(to right, #ffd395, #d32f6b);
+$background-gradient2: -webkit-linear-gradient(to right, #ffc371, #ff5f6d);
+$background-gradient3: #ff5f6d;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+Body {
+  background: $background-gradient3;
+  background: $background-gradient2;
+  background: $background-gradient;
+}
