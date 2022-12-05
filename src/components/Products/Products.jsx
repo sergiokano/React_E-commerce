@@ -3,9 +3,10 @@ import { ProductsContext } from "../../context/ProductsContext/ProductsState";
 import { Card, Button } from "antd";
 // import "./Products.css";
 import { ShoppingCartOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 
 const Products = () => {
-  const { products, getProducts, addCart, cart } = useContext(ProductsContext);
+  const { products, getProduct, getProducts, addCart, cart } = useContext(ProductsContext);
   useEffect(() => {
     getProducts();
   }, []);
@@ -19,7 +20,7 @@ const Products = () => {
       <p>Our latest products</p>
       {products?.map((product) => {
         return (
-          <div key={product._id} className="site-card-border-less-wrapper">
+          <div key={product.id} className="site-card-border-less-wrapper">
             <Card
               title={product.name}
               bordered={true}
@@ -32,6 +33,8 @@ const Products = () => {
               <Button onClick={() => addCart(product)}>
                 Add to Cart <ShoppingCartOutlined />
               </Button>
+              {/* <Button onClick={()=>getProduct(product.id)}>Ver producto</Button> */}
+              <Button><Link to={'product/'+product.id}>Ver producto</Link></Button>
             </Card>
           </div>
         );
