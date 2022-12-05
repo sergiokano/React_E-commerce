@@ -2,6 +2,8 @@ import React from "react";
 import "./Footer.scss";
 // import { Link } from "react-router-dom";
 import paymentImg from "../../img/payment.png";
+import logo from "../../img/logo_freshly.png"
+
 
 function Footer() {
   return (
@@ -44,7 +46,7 @@ function Footer() {
       </div>
       <div className="bottom">
         <div className="left">
-          <span className="logo">Cano'smetics</span>
+        <img className="logo" src={logo} alt="" />
           <span className="copyright">
             <span>© Copyright {new Date().getFullYear()}</span>
             <span> designed by </span>

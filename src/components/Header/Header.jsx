@@ -1,97 +1,59 @@
 import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Menu } from "antd";
-import { HomeOutlined, UserOutlined, UserAddOutlined, LogoutOutlined, LoginOutlined, ShopOutlined, ShoppingCartOutlined } from "@ant-design/icons";
+import {
+  HomeOutlined,
+  UserOutlined,
+  UserAddOutlined,
+  LogoutOutlined,
+  LoginOutlined,
+  ShopOutlined,
+  ShoppingCartOutlined,
+} from "@ant-design/icons";
 import { UserContext } from "../../context/UserContext/UserState";
 import { Badge } from "antd";
 import "./Header.scss";
 import { ProductsContext } from "../../context/ProductsContext/ProductsState";
-
+import logo from "../../img/logo_freshly.png";
 
 const Header = () => {
-    const {token, logout} = useContext(UserContext)
-    const { cart } = useContext(ProductsContext)
-    const navigate = useNavigate()
-    const onLogout = ()=>{
-        logout()
-        navigate("/")
-    }
-    return (
-        <div className="container-header">
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/products">
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link to="/cart">
-                  Cart
-                </Link>
-              </li>
-              <li>
-                <Link to="/register">
-                  Sign Up
-                </Link>
-              </li>
-              <li>
-                <Link to="/login">
-                  Login
-                </Link>
-              </li>
-            </ul>
-            <div className="container-header_right">
+  const { token, logout } = useContext(UserContext);
+  const { cart } = useContext(ProductsContext);
+  const navigate = useNavigate();
+  const onLogout = () => {
+    logout();
+    navigate("/");
+  };
+  return (
+    <nav className="container-header">
+      <img className="logo" src={logo} alt="logo freshly cosmetics" />
+      <ul className="navbar">
+        <li>
+          <Link to="/">Home</Link>
+        </li>
 
-            </div>
-          </nav>
+        <li className="menu-vertical">
+          <Link to="/products">Products</Link>
+          <ul className="menu-vertical-container">
+            <li>Category 1</li>
+            <li>Category 2</li>
+            <li>Category 3</li>
+          </ul>
+        </li>
+        <li>
+          <Link to="/cart">Cart</Link>
+        </li>
 
+        <li>
+          <Link to="/register">Sign Up</Link>
+        </li>
 
-        {/* <Menu mode="horizontal" defaultSelectedKeys={["home"]}>
-          <Menu.Item key="home" icon={<HomeOutlined />}>
-            <Link to="/">Home</Link>
-          </Menu.Item>
-          <Menu.Item key="products" icon={<ShopOutlined />}>
-            <Link to="/products">Products</Link>
-          </Menu.Item>
-          <Menu.Item key="cart" icon={<ShoppingCartOutlined />}>
-        <Link to="/cart">
-          {" "}
-          <Badge count={cart.length} size="small">
-            Cart
-          </Badge>
-        </Link>
-      </Menu.Item>
-          <Menu.Item key="register" icon={<UserAddOutlined />}>
-              <Link to="/register">Register</Link>
-            </Menu.Item>
-          {token ? (
-            <>
-              <Menu.Item key="profile" icon={<UserOutlined />}> 
-                <Link to="/profile">Profile</Link>
-              </Menu.Item>
-              <Menu.Item key="logout" icon={<LogoutOutlined />} onClick={onLogout}>
-                <Link to="/">Logout</Link>
-              </Menu.Item>
-            </>
-          )  : (
-            <Menu.Item key="login" icon={<LoginOutlined />}>
-              <Link to="/login">Login</Link>
-            </Menu.Item>
-            
-          )}
-        </Menu> */}
-        </div>
-      );
-    };
-    
-    export default Header;
+        <li>
+          <Link to="/login">Login</Link>{" "}
+        </li>
+      </ul>
+    </nav>
+  );
+};
 
-
-    
-    
+export default Header;
