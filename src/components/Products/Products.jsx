@@ -30,7 +30,7 @@ const Products = () => {
             >
               <p>{product.price} €</p>
               <Button onClick={() => addCart(product)}>
-                Add Cart <ShoppingCartOutlined />
+                Add to Cart <ShoppingCartOutlined />
               </Button>
             </Card>
           </div>
