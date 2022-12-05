@@ -28,8 +28,8 @@ const Header = () => {
           <Menu.Item key="cart" icon={<ShoppingCartOutlined />}>
         <Link to="/cart">
           {" "}
-          <Badge count={cart.length} size="small">
             Cart
+          <Badge count={cart.length} size="small">
           </Badge>
         </Link>
       </Menu.Item>
