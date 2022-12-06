@@ -13,6 +13,7 @@ import { ProductsProvider } from "./context/ProductsContext/ProductsState";
 import { OrderProvider } from './context/OrdersContext/OrderState';
 import Cart from "./components/Cart/Cart";
 import Product from "./components/Products/Product/Product";
+import NoMatch from "./components/NoMatch/NoMatch";
 
 function App() {
   return (
@@ -29,7 +30,9 @@ function App() {
                 <Route path="/products" element={<Products />} />
                 <Route path='/profile' element={<Profile />} />
                 <Route path='/cart' element={<Cart />} />
-                <Route path='/product/:id' element={<Product />} />
+                <Route path='/products/product/:id' element={<Product />} />
+                <Route path='*' element={<NoMatch />} />
+
               </Routes>
               <Footer />
             </OrderProvider>

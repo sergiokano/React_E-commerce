@@ -37,6 +37,7 @@ export const ProductsProvider = ({ children }) => {
 const getProduct = async(id) =>{
   try {
     const res = await axios.get(API_URL + "/products/findbyId/" + id)
+    console.log("hola")
     dispatch({
       type: "GET_PRODUCT",
       payload: res.data,

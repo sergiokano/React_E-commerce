@@ -6,7 +6,7 @@ import { ProductsContext } from '../../../context/ProductsContext/ProductsState'
 const Product = () => {
     const { id } = useParams();
     // const navigate = useNavigate();
-    const { products, product, getProducts, getProduct } = useContext(ProductsContext)
+    const { product, getProduct } = useContext(ProductsContext)
 
     useEffect(() => {
         // getProducts()
