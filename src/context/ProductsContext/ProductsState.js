@@ -7,6 +7,7 @@ const cart = JSON.parse(localStorage.getItem("cart"));
 const initialState = {
   products: [],
   cart: cart ? cart : [],
+  product:{}
 };
 
 export const ProductsContext = createContext(initialState);
@@ -34,14 +35,28 @@ export const ProductsProvider = ({ children }) => {
   });
 };
 
+const getProduct = async(id) =>{
+  try {
+    const res = await axios.get(API_URL + "/products/findbyId/" + id)
+    dispatch({
+      type: "GET_PRODUCT",
+      payload: res.data.product,
+    })
+  } catch (error) {
+    console.error(error)
+  }
+};
+
   return (
     <ProductsContext.Provider
       value={{
         products: state.products,
+        product:state.product,
         cart:state.cart,
         getProducts,
         addCart,
         clearCart,
+        getProduct
       }}
     >
       {children}

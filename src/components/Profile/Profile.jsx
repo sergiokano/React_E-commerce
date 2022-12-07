@@ -6,7 +6,6 @@ import "./Profile.scss";
 
 const Profile = () => {
   const { user, getUserInfo } = useContext(UserContext);
-
   useEffect(() => {
     getUserInfo();
   }, []);
@@ -29,6 +28,9 @@ const Profile = () => {
       <p><MailOutlined /> {user.email}</p>
       <p><PhoneOutlined /> {user.phone}</p>
       <p><TagOutlined /> {user.address}</p>
+      <br />
+      <span>{user?.Orders?.map(order => order.Products.map(product=> <p key={product.id}> Producto: {product.name}</p>))}</span>
+      
     </Card>
         </div>
    }
