@@ -34,35 +34,31 @@ li {
     .menu-vertical {
       text-align: start;
       border: blue 1px solid;
-
+      mix-blend-mode: multiply;
+      background-color: black;
+      
+      color: white;
+      
+      
+      z-index: 999;
       .menu-vertical-container {
         display: none;
         flex-direction: column;
         text-align: left;
         border: blue 1px solid;
         position: fixed;
-        top: 80px;
+        top: 85px;
         left: 0;
         background-color: black;
-
+        
         right: 0;
-        z-index: 999;
-
+        
         // align-content: center;
         margin-top: 1em;
         li {
-          margin: 0.4em;
-          color:rgba(0, 0, 0, 0);
-
-
-          // opacity: 0.5em;
-          display: block;
-          font-size: 100px;
-          font: 100% $font-text;
-          text-align: center;
-          // margin-top: -20px;
-          font-weight: bold;
-          background-size: cover;
+          background: black;
+          color: rgb(255, 255, 255);
+          font: 800% $font-text;
         }
       }
     }

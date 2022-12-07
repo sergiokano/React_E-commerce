@@ -4,6 +4,7 @@
 $font-text: "NB International";
 $color-text: rgb(255, 255, 255);
 
+$background-1: rgb(77, 77, 77);
 $background-gradient: linear-gradient(to right, #ffd395, #d32f6b);
 $background-gradient2: -webkit-linear-gradient(to right, #ffc371, #ff5f6d);
 $background-gradient3: #ff5f6d;
@@ -13,7 +14,9 @@ $background-gradient3: #ff5f6d;
 
 
 Body {
-  background: $background-gradient3;
-  background: $background-gradient2;
-  background: $background-gradient;
+  background: $background-1;
+
+  // background: $background-gradient3;
+  // background: $background-gradient2;
+  // background: $background-gradient;
 }
