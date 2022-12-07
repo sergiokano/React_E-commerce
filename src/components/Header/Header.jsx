@@ -13,6 +13,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../context/UserContext/UserState";
 import { Badge } from "antd";
 import "./Header.scss";
+
 import { ProductsContext } from "../../context/ProductsContext/ProductsState";
 import logo from "../../img/logo_freshly.png";
 
@@ -40,8 +41,14 @@ const Header = () => {
             <li>Category 3</li>
           </ul>
         </li>
+        
         <li>
-          <Link to="/cart">Cart</Link>
+          <Link to="/">About</Link>
+        </li>
+        <li>
+          <Link to="/cart">
+            <span class="material-icons">shopping_bag</span>
+          </Link>
 
           <Badge
             count={cart.length}
@@ -54,10 +61,14 @@ const Header = () => {
         {token ? (
           <>
             <li>
-              <Link to="/profile">Profile</Link>{" "}
+              <Link to="/profile">
+                <span class="material-icons">person</span>
+              </Link>{" "}
             </li>
             <li>
-              <Link to="/logout">Logout</Link>{" "}
+              <Link to="/logout">
+                <span class="material-icons">logout</span>
+              </Link>{" "}
             </li>
           </>
         ) : (
