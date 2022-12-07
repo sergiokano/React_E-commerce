@@ -3,13 +3,15 @@ import { ProductsContext } from "../../context/ProductsContext/ProductsState";
 import { Card, Button } from "antd";
 // import "./Products.css";
 import { ShoppingCartOutlined } from "@ant-design/icons";
-import { Link } from "react-router-dom";
 
 const Products = () => {
-  const { products, getProduct, getProducts, addCart, cart } = useContext(ProductsContext);
+  const { products, getProducts, addCart, cart } = useContext(ProductsContext);
   useEffect(() => {
     getProducts();
   }, []);
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
