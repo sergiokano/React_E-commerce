@@ -28,20 +28,17 @@ li {
     width: 60%;
     justify-content: space-between;
     padding-right: 0.5em;
-    // background-color: red;
     // border: blue 1px solid;
     //   flex-wrap: nowrap;
     .menu-vertical {
       text-align: start;
-      border: blue 1px solid;
+      // border: blue 1px solid;
       mix-blend-mode: multiply;
-      background-color: black;
+      // background-color: white;
+      // color: white;
       
-      color: white;
-      
-      
-      z-index: 999;
       .menu-vertical-container {
+        z-index: 999;
         display: none;
         flex-direction: column;
         text-align: left;
@@ -50,9 +47,9 @@ li {
         top: 85px;
         left: 0;
         background-color: black;
-        
+
         right: 0;
-        
+
         // align-content: center;
         margin-top: 1em;
         li {
@@ -62,10 +59,10 @@ li {
         }
       }
     }
-    .menu-vertical {
-      &:hover .menu-vertical-container {
-        display: flex;
-      }
+    .products {
+    &:hover .menu-vertical-container {
+      display: flex;
+    }
     }
   }
 }

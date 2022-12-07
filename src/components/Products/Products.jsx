@@ -5,6 +5,7 @@ import { Card, Button } from "antd";
 import { ShoppingCartOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
+
 const Products = () => {
   const { products, getProducts, addCart, cart } = useContext(ProductsContext);
   useEffect(() => {
@@ -23,7 +24,7 @@ const Products = () => {
       <p>Our latest products</p>
       {products?.map((product) => {
         return (
-          <div key={product.id} className="site-card-border-less-wrapper">
+          <div key={product.id} className="site-card-border-less-wrapper z-index">
             <Card
               title={product.name}
               bordered={true}

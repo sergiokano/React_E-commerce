@@ -33,15 +33,15 @@ const Header = () => {
           <Link to="/">Home</Link>
         </li>
 
-        <li className="menu-vertical">
-          <Link to="/products">Products</Link>
-          <div className="menu-vertical-multiply">
-          <ul className="menu-vertical-container">
-            <li>Category 1</li>
-            <li>Category 2</li>
-            <li>Category 3</li>
-          </ul>
+        <li className="products">
+          <div className="menu-vertical">
+            <ul className="menu-vertical-container">
+              <li>Category 1</li>
+              <li>Category 2</li>
+              <li>Category 3</li>
+            </ul>
           </div>
+          <Link to="/products">Products</Link>
         </li>
 
         <li>
