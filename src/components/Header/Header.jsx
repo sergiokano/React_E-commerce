@@ -1,15 +1,15 @@
 import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Menu } from "antd";
-import {
-  HomeOutlined,
-  UserOutlined,
-  UserAddOutlined,
-  LogoutOutlined,
-  LoginOutlined,
-  ShopOutlined,
-  ShoppingCartOutlined,
-} from "@ant-design/icons";
+// import { Menu } from "antd";
+// import {
+//   HomeOutlined,
+//   UserOutlined,
+//   UserAddOutlined,
+//   LogoutOutlined,
+//   LoginOutlined,
+//   ShopOutlined,
+//   ShoppingCartOutlined,
+// } from "@ant-design/icons";
 import { UserContext } from "../../context/UserContext/UserState";
 import { Badge } from "antd";
 import "./Header.scss";
@@ -42,15 +42,35 @@ const Header = () => {
         </li>
         <li>
           <Link to="/cart">Cart</Link>
+
+          <Badge
+            count={cart.length}
+            size="small"
+            offset={[1, -10]}
+            color="none"
+          ></Badge>
         </li>
 
-        <li>
-          <Link to="/register">Sign Up</Link>
-        </li>
+        {token ? (
+          <>
+            <li>
+              <Link to="/profile">Profile</Link>{" "}
+            </li>
+            <li>
+              <Link to="/logout">Logout</Link>{" "}
+            </li>
+          </>
+        ) : (
+          <>
+            <li>
+              <Link to="/login">Login</Link>{" "}
+            </li>
 
-        <li>
-          <Link to="/login">Login</Link>{" "}
-        </li>
+            <li>
+              <Link to="/register">Sign Up</Link>
+            </li>
+          </>
+        )}
       </ul>
     </nav>
   );
