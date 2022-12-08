@@ -11,8 +11,8 @@ const Product = () => {
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(0);
   const images = [
-    "https://cdn.shopify.com/s/files/1/0574/0127/8625/products/4DPSsolo_1000x.png?v=1652354694",
-    "https://cdn.shopify.com/s/files/1/0574/0127/8625/products/TRPSD_61cb5ab5-316c-432e-bb10-ba56cc36141e_1000x.png?v=1652362413",
+    "https://cdn.shopify.com/s/files/1/0574/0127/8625/products/Wildsmith_EyeSerum_HR_bae48101-5214-4b44-97aa-6b4570fc666b_1000x.png?v=1623667289",
+    "https://cdn.shopify.com/s/files/1/0574/0127/8625/products/Wildsmith_EyeSerum_Outer_HR_1000x.png?v=1623667289",
   ];
   useEffect(() => {
     getProduct(id);
