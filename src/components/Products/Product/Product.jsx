@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { ProductsContext } from "../../../context/ProductsContext/ProductsState";
 import "./Product.scss";
-import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons";
+import { HeartOutlined, ShoppingOutlined } from "@ant-design/icons";
 
 const Product = () => {
   const { id } = useParams();
@@ -49,7 +49,7 @@ const Product = () => {
             <HeartOutlined />
           </button>
           <button className="item" onClick={() => addCart(product)}>
-            <ShoppingCartOutlined />
+            <ShoppingOutlined/>
           </button>
         </div>
       </div>
