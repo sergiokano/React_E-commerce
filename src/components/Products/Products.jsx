@@ -4,6 +4,7 @@ import { Card, Button } from "antd";
 // import "./Products.css";
 import { ShoppingCartOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
+import "./Products.scss"
 
 
 const Products = () => {

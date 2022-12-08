@@ -1,0 +1,66 @@
+@mixin hideTapHighlightColor() {
+  //Prevent highlight colour when element is tapped
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@mixin hardwareAccel() {
+  //Improve performance on mobile/tablet devices
+  transform: translateZ(0);
+}
+
+@mixin improveAntiAlias() {
+  //Improve aliasing on mobile/tablet devices
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.slider {
+  height: calc(100vh - 80px);
+  width: 100%;
+  position: relative;
+  
+  overflow: hidden;
+
+  .img-container {
+    width: 300vw;
+    height: 100%;
+    display: flex;
+    transition: all 0.7s ease;
+
+    img {
+      width: 100vw;
+        height: 90%;
+      object-fit: cover;
+       
+    }
+    .img1 {
+        object-position: 0 -9vw;
+    }
+    .img3 {
+        object-position: 0 -25vw;
+    }
+  }
+  .icons {
+    width: fit-content;
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    gap: 10px;
+    margin: auto;
+    .material-icons {
+      width: 50px;
+      height: 50px;
+      border: 1px solid rgb(230, 230, 230);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      &:hover {
+        transform: translateY(-3px);
+        transition-duration: 0.5s;
+        box-shadow: 0 0 5px rgb(230, 230, 230);
+      }
+    }
+  }
+}
