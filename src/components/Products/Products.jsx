@@ -37,7 +37,6 @@ const Products = () => {
               <Button onClick={() => addCart(product)}>
                 Add to Cart <ShoppingCartOutlined />
               </Button>
-              {/* <Button onClick={()=>getProduct(product.id)}>Ver producto</Button> */}
               <Button><Link to={'product/'+product.id}>Ver producto</Link></Button>
             </Card>
           </div>
