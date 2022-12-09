@@ -4,10 +4,11 @@ import { useParams } from "react-router-dom";
 import { ProductsContext } from "../../../context/ProductsContext/ProductsState";
 import "./Product.scss";
 import { HeartOutlined, ShoppingOutlined } from "@ant-design/icons";
+import { Button } from "antd";
 
 const Product = () => {
   const { id } = useParams();
-  const { product, getProduct, addCart } = useContext(ProductsContext);
+  const { product, getProduct, addCart, addWishlist } = useContext(ProductsContext);
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(0);
   const images = [
@@ -36,21 +37,40 @@ const Product = () => {
         <br />
         <br />
 
-        <div className="quantity">
-          <button
+        <div className="quantity"> 
+          <Button style={{
+                size: "small",
+                border: "1px solid lightGray",
+                background: "transparent",
+              }}
             onClick={() => setQuantity((prev) => (prev === 1 ? 1 : prev - 1))}
           >
             -
-          </button>
+          </Button>
           {quantity}
-          <button onClick={() => setQuantity((prev) => prev + 1)}>+</button>
+          <Button style={{
+                size: "small",
+                border: "1px solid lightGray",
+                background: "transparent",
+              }}
+              onClick={() => setQuantity((prev) => prev + 1)}>+</Button>
 
-          <button className="item">
+          <Button style={{
+                size: "small",
+                border: "1px solid lightGray",
+                background: "transparent",
+              }}
+              className="item"onClick={() => addWishlist(product)}>
             <HeartOutlined />
-          </button>
-          <button className="item" onClick={() => addCart(product)}>
+          </Button>
+          <Button style={{
+                size: "small",
+                border: "1px solid lightGray",
+                background: "transparent",
+              }}
+               className="item" onClick={() => addCart(product)}>
             <ShoppingOutlined/>
-          </button>
+          </Button>
         </div>
       </div>
     </div>

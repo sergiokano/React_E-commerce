@@ -27,13 +27,24 @@ const Cart = () => {
         style={{
           width: 300,
           border: "1px solid lightGray",
+          background: "transparent",
         }}
       >
         {cartNames}
         <div >
           <br />
-          <Button onClick={clearCart}>Clear Cart</Button>
-          <Button onClick={() => createNewOrder()}>Buy <ShoppingOutlined /></Button>
+          <Button style={{
+                size: "small",
+                border: "1px solid lightGray",
+                background: "transparent",
+              }}
+               onClick={clearCart}>Clear</Button>
+          <Button style={{
+                size: "small",
+                border: "1px solid lightGray",
+                background: "transparent",
+              }}
+               onClick={() => createNewOrder()}>Buy <ShoppingOutlined /></Button>
         </div>
       </Card>
     </div>

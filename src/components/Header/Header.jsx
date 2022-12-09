@@ -10,6 +10,7 @@ import { Link, useNavigate } from "react-router-dom";
 //   ShopOutlined,
 //   ShoppingCartOutlined,
 // } from "@ant-design/icons";
+import { HeartOutlined, ShoppingOutlined } from "@ant-design/icons";
 import { UserContext } from "../../context/UserContext/UserState";
 import { Badge } from "antd";
 import "./Header.scss";
@@ -62,6 +63,11 @@ const Header = () => {
 
         {token ? (
           <>
+            <li>
+              <Link to="/wishlist">
+                <span class="material-icons"><HeartOutlined/></span>
+              </Link>{" "}
+            </li>
             <li>
               <Link to="/profile">
                 <span class="material-icons">person</span>
