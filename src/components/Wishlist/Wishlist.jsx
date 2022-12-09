@@ -37,12 +37,14 @@ const Wishlist = () => {
                 size: "small",
                 border: "1px solid lightGray",
                 background: "transparent",
+                color: "lightGray",
               }}
                onClick={clearCart}>Clear</Button>
                     <Button style={{
                 size: "small",
                 border: "1px solid lightGray",
                 background: "transparent",
+                color: "lightGray",
               }}
                className="item" onClick={() => createNewOrder(product)}>
                         <ShoppingOutlined />

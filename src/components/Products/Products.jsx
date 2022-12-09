@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { ProductsContext } from "../../context/ProductsContext/ProductsState";
 import { Card, Button } from "antd";
 import "./Products.scss";
-import { ShoppingCartOutlined } from "@ant-design/icons";
+import { ShoppingOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
 
@@ -24,41 +24,37 @@ const Products = () => {
       <p>Our latest products</p>
       {products?.map((product) => {
         return (
-            <>
-          <div key={product.id} className="site-card-border-less-wrapper z-index">
-            <br />
-            <Card
-              title={product.name}
-              bordered={true}
-              style={{
-                width: 300,
-                border: "1px solid lightGray",
-                background: "transparent",
-                border: "lightGray",
-                color: "white",
-              }}
-            >
-              <p>{product.price} €</p>
-              <Button style={{
-                size: "small",
-                border: "1px solid lightGray",
-                background: "transparent",
-                border: "lightGray",
-                color: "white",
-              }}
-                onClick={() => addCart(product)}>
-                Add to Cart <ShoppingCartOutlined />
-              </Button>
-              <Button style={{
-                size: "small",
-                border: "1px solid lightGray",
-                background: "transparent",
-                border: "lightGray",
-                color: "white",
-                margin: "10px"
-              }}><Link to={'product/' + product.id}>Ver producto</Link></Button>
-            </Card>
-          </div>
+          <>
+            <div key={product.id} className="site-card-border-less-wrapper z-index">
+              <br />
+              <Card
+                title={product.name}
+                bordered={true}
+                style={{
+                  width: 300,
+                  border: "1px solid lightGray",
+                  background: "transparent",
+                }}
+              >
+                <p>{product.price}</p>
+                <Button style={{
+                  size: "small",
+                  border: "1px solid lightGray",
+                  background: "transparent",
+                  color: "lightGray",
+                }}
+                  onClick={() => addCart(product)}>
+                  <ShoppingOutlined />
+                </Button>
+                <Button style={{
+                  size: "small",
+                  border: "1px solid lightGray",
+                  background: "transparent",
+                  color: "lightGray",
+                  margin: "10px"
+                }}><Link to={'product/' + product.id}>See product</Link></Button>
+              </Card>
+            </div>
           </>);
       })}
     </div>

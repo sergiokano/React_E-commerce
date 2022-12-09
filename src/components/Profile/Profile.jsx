@@ -25,7 +25,7 @@ const Profile = () => {
         border: "1px solid lightGray",
         background: "transparent",
         border: "lightGray",
-        color: "white",
+        color: "lightGray",
       }}
     >
       <p><MailOutlined /> {user.email}</p>
