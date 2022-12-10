@@ -23,14 +23,16 @@ const Products = () => {
           <>
             <div key={product.id} className="site-card-border-less-wrapper z-index">
               <br />
-              <Card
+              <div className="card-sass">
+              <Card 
                 title={product.name}
                 bordered={true}
                 style={{
                   width: 300,
                   border: "1px solid gray",
                   background: "transparent",
-                }}
+                  color: "lightGray",
+                }} 
               >
                 <p>{product.price}</p>
                 <Button style={{
@@ -50,6 +52,7 @@ const Products = () => {
                   margin: "10px"
                 }}><Link to={'product/' + product.id}>See product</Link></Button>
               </Card>
+              </div>
             </div>
           </>);
       })}
