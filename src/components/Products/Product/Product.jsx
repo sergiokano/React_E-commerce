@@ -37,44 +37,56 @@ const Product = () => {
         <br />
         <br />
 
-        <div className="quantity"> 
+        <div className="quantity">
           <Button style={{
-                size: "small",
-                border: "1px solid gray",
-                background: "transparent",
-                color: "lightGray",
-              }}
+            size: "small",
+            border: "1px solid gray",
+            background: "transparent",
+            color: "lightGray",
+          }}
             onClick={() => setQuantity((prev) => (prev === 1 ? 1 : prev - 1))}
           >
             -
           </Button>
           {quantity}
           <Button style={{
-                size: "small",
-                border: "1px solid gray",
-                background: "transparent",
-                color: "lightGray",
-              }}
-              onClick={() => setQuantity((prev) => prev + 1)}>+</Button>
+            size: "small",
+            border: "1px solid gray",
+            background: "transparent",
+            color: "lightGray",
+          }}
+            onClick={() => setQuantity((prev) => prev + 1)}>+</Button>
 
           <Button style={{
-                size: "small",
-                border: "1px solid gray",
-                background: "transparent",
-                color: "lightGray",
-              }}
-              className="item"onClick={() => addWishlist(product)}>
+            size: "small",
+            border: "1px solid gray",
+            background: "transparent",
+            color: "lightGray",
+          }}
+            className="item" onClick={() => addWishlist(product)}>
             <HeartOutlined />
           </Button>
           <Button style={{
-                size: "small",
-                border: "1px solid gray",
-                background: "transparent",
-                color: "lightGray",
-              }}
-               className="item" onClick={() => addCart(product)}>
-            <ShoppingOutlined/>
+            size: "small",
+            border: "1px solid gray",
+            background: "transparent",
+            color: "lightGray",
+          }}
+            className="item" onClick={() => addCart(product)}>
+            <ShoppingOutlined />
           </Button>
+        </div>
+        <br />
+        <br />
+        <div className="info">
+          <p>Facial product</p>
+          <p>#cosmetic #men #women #facialcosmetic</p>
+          <br />
+          <p>Freshly Cosmetics®</p>
+        </div>
+        <hr />
+        <div className="details">
+          <span>FAQ</span>
         </div>
       </div>
     </div>
