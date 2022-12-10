@@ -10,6 +10,7 @@ import { Link, useNavigate } from "react-router-dom";
 //   ShopOutlined,
 //   ShoppingCartOutlined,
 // } from "@ant-design/icons";
+import { Input } from 'antd';
 import { HeartOutlined, ShoppingOutlined } from "@ant-design/icons";
 import { UserContext } from "../../context/UserContext/UserState";
 import { Badge } from "antd";
@@ -29,6 +30,7 @@ const Header = () => {
   return (
     <nav className="container-header">
       <img className="logo" src={logo} alt="logo freshly cosmetics" />
+
       <ul className="navbar">
         <li>
           <Link to="/">Home</Link>
@@ -91,6 +93,16 @@ const Header = () => {
           </>
         )}
       </ul>
+      <div className="search-bar">
+        <Input style={{
+          size: "small",
+          border: "1px solid gray",
+          background: "transparent",
+          color: "lightGray",
+        }}
+        placeholder="Search cosmetic..." 
+        />
+      </div>
     </nav>
   );
 };
