@@ -26,7 +26,7 @@ const Wishlist = () => {
                 bordered={true}
                 style={{
                     width: 300,
-                    border: "1px solid lightGray",
+                    border: "1px solid gray",
                     background: "transparent",
                   }}
             >
@@ -35,14 +35,14 @@ const Wishlist = () => {
                     <br />
                     <Button style={{
                 size: "small",
-                border: "1px solid lightGray",
+                border: "1px solid gray",
                 background: "transparent",
                 color: "lightGray",
               }}
                onClick={clearCart}>Clear</Button>
                     <Button style={{
                 size: "small",
-                border: "1px solid lightGray",
+                border: "1px solid gray",
                 background: "transparent",
                 color: "lightGray",
               }}

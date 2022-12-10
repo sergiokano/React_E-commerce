@@ -9,15 +9,10 @@ import "./Products.scss"
 
 const Products = () => {
   const { products, getProducts, addCart, cart } = useContext(ProductsContext);
-  useEffect(() => {
-    getProducts();
-  }, []);
-  useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cart));
-  }, [cart]);
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
+    getProducts();
   }, [cart]);
 
   return (
@@ -33,14 +28,14 @@ const Products = () => {
                 bordered={true}
                 style={{
                   width: 300,
-                  border: "1px solid lightGray",
+                  border: "1px solid gray",
                   background: "transparent",
                 }}
               >
                 <p>{product.price}</p>
                 <Button style={{
                   size: "small",
-                  border: "1px solid lightGray",
+                  border: "1px solid gray",
                   background: "transparent",
                   color: "lightGray",
                 }}
@@ -49,7 +44,7 @@ const Products = () => {
                 </Button>
                 <Button style={{
                   size: "small",
-                  border: "1px solid lightGray",
+                  border: "1px solid gray",
                   background: "transparent",
                   color: "lightGray",
                   margin: "10px"

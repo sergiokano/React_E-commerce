@@ -40,8 +40,9 @@ const Product = () => {
         <div className="quantity"> 
           <Button style={{
                 size: "small",
-                border: "1px solid lightGray",
+                border: "1px solid gray",
                 background: "transparent",
+                color: "lightGray",
               }}
             onClick={() => setQuantity((prev) => (prev === 1 ? 1 : prev - 1))}
           >
@@ -50,23 +51,26 @@ const Product = () => {
           {quantity}
           <Button style={{
                 size: "small",
-                border: "1px solid lightGray",
+                border: "1px solid gray",
                 background: "transparent",
+                color: "lightGray",
               }}
               onClick={() => setQuantity((prev) => prev + 1)}>+</Button>
 
           <Button style={{
                 size: "small",
-                border: "1px solid lightGray",
+                border: "1px solid gray",
                 background: "transparent",
+                color: "lightGray",
               }}
               className="item"onClick={() => addWishlist(product)}>
             <HeartOutlined />
           </Button>
           <Button style={{
                 size: "small",
-                border: "1px solid lightGray",
+                border: "1px solid gray",
                 background: "transparent",
+                color: "lightGray",
               }}
                className="item" onClick={() => addCart(product)}>
             <ShoppingOutlined/>
