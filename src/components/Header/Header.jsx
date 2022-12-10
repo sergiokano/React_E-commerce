@@ -60,14 +60,14 @@ const Header = () => {
             color="none"
           ></Badge>
         </li>
+        <li>
+          <Link to="/wishlist">
+            <span class="material-icons"><HeartOutlined /></span>
+          </Link>{" "}
+        </li>
 
         {token ? (
           <>
-            <li>
-              <Link to="/wishlist">
-                <span class="material-icons"><HeartOutlined/></span>
-              </Link>{" "}
-            </li>
             <li>
               <Link to="/profile">
                 <span class="material-icons">person</span>
