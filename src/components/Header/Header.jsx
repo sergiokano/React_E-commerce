@@ -15,7 +15,6 @@ import { HeartOutlined, ShoppingOutlined } from "@ant-design/icons";
 import { UserContext } from "../../context/UserContext/UserState";
 import { Badge } from "antd";
 import "./Header.scss";
-
 import { ProductsContext } from "../../context/ProductsContext/ProductsState";
 import logo from "../../img/logo_freshly.png";
 
@@ -102,6 +101,7 @@ const Header = () => {
         }}
         placeholder="Search cosmetic..." 
         />
+        
       </div>
     </nav>
   );
