@@ -4,10 +4,12 @@ import axios from "axios";
 
 const API_URL = "http://localhost:8080";
 const cart = JSON.parse(localStorage.getItem("cart"));
+const wishlist = JSON.parse(localStorage.getItem("wishlist"));
 const initialState = {
   products: [],
   cart: cart ? cart : [],
-  product:{}
+  product:{},
+  wishlist: wishlist ? wishlist: []
 };
 
 export const ProductsContext = createContext(initialState);
@@ -26,6 +28,12 @@ export const ProductsProvider = ({ children }) => {
  const addCart = (product) =>{
   dispatch({
     type: "ADD_CART",
+    payload: product,
+  })
+ };
+ const addWishlist = (product) =>{
+  dispatch({
+    type: "ADD_WISHLIST",
     payload: product,
   })
  }
@@ -53,10 +61,12 @@ const getProduct = async(id) =>{
         products: state.products,
         product:state.product,
         cart:state.cart,
+        wishlist:state.wishlist,
         getProducts,
         addCart,
         clearCart,
-        getProduct
+        getProduct,
+        addWishlist
       }}
     >
       {children}

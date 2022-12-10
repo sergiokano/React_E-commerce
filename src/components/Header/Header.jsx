@@ -10,6 +10,7 @@ import { Link, useNavigate } from "react-router-dom";
 //   ShopOutlined,
 //   ShoppingCartOutlined,
 // } from "@ant-design/icons";
+import { HeartOutlined, ShoppingOutlined } from "@ant-design/icons";
 import { UserContext } from "../../context/UserContext/UserState";
 import { Badge } from "antd";
 import "./Header.scss";
@@ -58,6 +59,11 @@ const Header = () => {
             offset={[1, -10]}
             color="none"
           ></Badge>
+        </li>
+        <li>
+          <Link to="/wishlist">
+            <span class="material-icons"><HeartOutlined /></span>
+          </Link>{" "}
         </li>
 
         {token ? (

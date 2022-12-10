@@ -3,16 +3,17 @@ import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { ProductsContext } from "../../../context/ProductsContext/ProductsState";
 import "./Product.scss";
-import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons";
+import { HeartOutlined, ShoppingOutlined } from "@ant-design/icons";
+import { Button } from "antd";
 
 const Product = () => {
   const { id } = useParams();
-  const { product, getProduct, addCart } = useContext(ProductsContext);
+  const { product, getProduct, addCart, addWishlist } = useContext(ProductsContext);
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(0);
   const images = [
-    "https://cdn.shopify.com/s/files/1/0574/0127/8625/products/4DPSsolo_1000x.png?v=1652354694",
-    "https://cdn.shopify.com/s/files/1/0574/0127/8625/products/TRPSD_61cb5ab5-316c-432e-bb10-ba56cc36141e_1000x.png?v=1652362413",
+    "https://cdn.shopify.com/s/files/1/0574/0127/8625/products/Wildsmith_EyeSerum_HR_bae48101-5214-4b44-97aa-6b4570fc666b_1000x.png?v=1623667289",
+    "https://cdn.shopify.com/s/files/1/0574/0127/8625/products/Wildsmith_EyeSerum_Outer_HR_1000x.png?v=1623667289",
   ];
   useEffect(() => {
     getProduct(id);
@@ -36,21 +37,40 @@ const Product = () => {
         <br />
         <br />
 
-        <div className="quantity">
-          <button
+        <div className="quantity"> 
+          <Button style={{
+                size: "small",
+                border: "1px solid lightGray",
+                background: "transparent",
+              }}
             onClick={() => setQuantity((prev) => (prev === 1 ? 1 : prev - 1))}
           >
             -
-          </button>
+          </Button>
           {quantity}
-          <button onClick={() => setQuantity((prev) => prev + 1)}>+</button>
+          <Button style={{
+                size: "small",
+                border: "1px solid lightGray",
+                background: "transparent",
+              }}
+              onClick={() => setQuantity((prev) => prev + 1)}>+</Button>
 
-          <button className="item">
+          <Button style={{
+                size: "small",
+                border: "1px solid lightGray",
+                background: "transparent",
+              }}
+              className="item"onClick={() => addWishlist(product)}>
             <HeartOutlined />
-          </button>
-          <button className="item" onClick={() => addCart(product)}>
-            <ShoppingCartOutlined />
-          </button>
+          </Button>
+          <Button style={{
+                size: "small",
+                border: "1px solid lightGray",
+                background: "transparent",
+              }}
+               className="item" onClick={() => addCart(product)}>
+            <ShoppingOutlined/>
+          </Button>
         </div>
       </div>
     </div>

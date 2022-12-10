@@ -1,8 +1,9 @@
 import React, { useContext, useEffect } from "react";
 import { Button, Card } from "antd";
 import { OrdersContext } from "../../context/OrdersContext/OrderState";
-import { ShoppingOutlined } from "@ant-design/icons";
+import { CreditCardOutlined } from "@ant-design/icons";
 import { ProductsContext } from "../../context/ProductsContext/ProductsState";
+import "./Cart.scss";
 
 const Cart = () => {
   const { cart, clearCart } = useContext(ProductsContext)
@@ -27,13 +28,27 @@ const Cart = () => {
         style={{
           width: 300,
           border: "1px solid lightGray",
+          background: "transparent",
+
         }}
       >
         {cartNames}
         <div >
           <br />
-          <Button onClick={clearCart}>Clear Cart</Button>
-          <Button onClick={() => createNewOrder()}>Buy <ShoppingOutlined /></Button>
+          <Button style={{
+            size: "small",
+            border: "1px solid lightGray",
+            background: "transparent",
+            color: "lightGray",
+          }}
+            onClick={clearCart}>Clear</Button>
+          <Button style={{
+            size: "small",
+            border: "1px solid lightGray",
+            background: "transparent",
+            color: "lightGray",
+          }}
+            onClick={() => createNewOrder()}>Buy <CreditCardOutlined /></Button>
         </div>
       </Card>
     </div>
