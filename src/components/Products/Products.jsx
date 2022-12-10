@@ -10,10 +10,9 @@ import "./Products.scss"
 
 const Products = () => {
   const { products, getProducts, addCart, cart } = useContext(ProductsContext);
-  const [selectedImage, setSelectedImage] = useState(0);
+  const [selectedImage] = useState(0);
   const images = [
     "https://cdn.shopify.com/s/files/1/0574/0127/8625/products/Wildsmith_EyeSerum_HR_bae48101-5214-4b44-97aa-6b4570fc666b_1000x.png?v=1623667289",
-    "https://cdn.shopify.com/s/files/1/0574/0127/8625/products/Wildsmith_EyeSerum_Outer_HR_1000x.png?v=1623667289",
   ];
 
   useEffect(() => {
@@ -40,7 +39,7 @@ const Products = () => {
                     color: "lightGray",
                   }}
                 >
-                  <img src={images[selectedImage]} alt="" width={200}/>
+                  <img src={images[selectedImage]} alt="" width={250}/>
                   <p>{product.price}</p>
                   <Button style={{
                     size: "small",
