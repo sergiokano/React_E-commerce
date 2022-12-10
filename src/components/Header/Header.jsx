@@ -17,15 +17,19 @@ import { Badge } from "antd";
 import "./Header.scss";
 import { ProductsContext } from "../../context/ProductsContext/ProductsState";
 import logo from "../../img/logo_freshly.png";
+import Products from "../Products/Products";
+import { useState } from "react";
 
 const Header = () => {
   const { token, logout } = useContext(UserContext);
   const { cart } = useContext(ProductsContext);
+  // const[query, setQuery] = useState("");
   const navigate = useNavigate();
   const onLogout = () => {
     logout();
     navigate("/");
   };
+
   return (
     <nav className="container-header">
       <img className="logo" src={logo} alt="logo freshly cosmetics" />
@@ -99,9 +103,14 @@ const Header = () => {
           background: "transparent",
           color: "lightGray",
         }}
-        placeholder="Search cosmetic..." 
+        placeholder="Search cosmetic..."
+        // onChange={(e) => setQuery(e.target.value)} 
         />
-        
+        {/* <ul className="lis">
+        {Products.map((product)=>(
+          <li className="listItem">{product.name}</li>
+        ))}
+        </ul> */}
       </div>
     </nav>
   );
