@@ -4,31 +4,23 @@ import "./Card.scss";
 
 const Card = ({ item }) => {
   const isDiscounted =
-    item.price < item.oldPrice ? (
-      <span>Discounted</span>
-    ) : (
-      <span></span>
-    );
-    const createdAtFormat = 
-    item.createdAt.slice(0,7).replace('-', '');
+    item.price < item.oldPrice ? <span>Discounted</span> : <span></span>;
 
-    const newSeason =
-    createdAtFormat > 202202 ? (
-      <span>newSeasonnn</span>
-    ) : (
-      <span></span>
-    );
+  const createdAtFormat = item.createdAt.slice(0, 7).replace("-", ""); 
+
+  const newSeason =
+    createdAtFormat > 202202 ? <span>newSeasonnn</span> : <noscript></noscript>;
 
   return (
     <Link to={`/product/${item.id}`}>
-      {console.log(createdAtFormat)};
+      {console.log(createdAtFormat)}
       <div className="card">
         <div className="image">
-          {isDiscounted}
+          <div className="discount">{isDiscounted}</div>
+          <div className="newSeason">{newSeason}</div>
           <img src={item.img} alt="" className="mainImg" />
           <img src={item.img2} alt="" className="secondImg" />
         </div>
-        {newSeason}
         <h2>{item.title}</h2>
         <div className="prices">
           <h3>${item.oldPrice}</h3>
