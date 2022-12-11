@@ -25,6 +25,7 @@ const Products = () => {
       <p>Our latest products</p>
       {products?.map((product) => {
         return (
+          console.log(product),
           <div key={product.id} className="site-card-border-less-wrapper z-index">
             <Card
               title={product.name}

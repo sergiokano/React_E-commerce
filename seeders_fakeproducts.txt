@@ -1,0 +1,39 @@
+   const data = [
+      {
+        id:1,
+        img: "https://www.freshlycosmetics.com/img/media/35/vitaminc_fondoblanco1_large_default.jpg?54b7075fcadade5dc67450826718044f",
+        title:"Vitamin C Concentrate Serum" ,
+        oldPrice: 40, 
+        price: 35,
+    },
+    {
+        id:2,
+        img: "https://www.freshlycosmetics.com/img/media/84/blueradiance_1_large_default.jpg?e227ca6118072735d251227406969fb4",
+        title:"Blue Radiance Enzymatic Serum" ,
+        oldPrice: 42, 
+        price: 35,
+    },
+    {
+        id:3,
+        img: "https://www.freshlycosmetics.com/img/media/365/lotusradiance_1_large_default.jpg?ed89eca96b7073d1e47f66f4a1ce8c77",
+        title:"Lotus Radiance Dark Spot Treatment" ,
+        isNew: true,
+        oldPrice: 40, 
+        price: 35,
+    },
+    {
+        id:4,
+        img: "https://www.freshlycosmetics.com/img/media/34/bloomorquid_fondoblanco_1premio_large_default.jpg?a3d48688673c5ea25bf8d88ec195b4f2",
+        title:"Bloom Orchid Face Cream" ,
+        oldPrice: 34, 
+        price: 29,
+    },
+    {
+        id:5,
+        img: "https://www.freshlycosmetics.com/img/media/142/peonylitmlesseyelash_1_large_default.jpg?cf763a70a7050f5f87ec1c4a73e6a8bc",
+        title:"Peony Limitless Eyelash Serum" ,
+        isNew: true,
+        oldPrice: 42, 
+        price: 37,
+    }
+    ]
