@@ -172,7 +172,7 @@ This project is under license of Sergio Cano and Miguel Herrera
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-This space is made to list my favourites SOCIAL NETWORK projects that I have explored and inspired by while doing my app.
+This space is made to list my favourites E-COMMERCE projects that I have explored and inspired by while doing my app.
 
 * https://github.com/Molerog/FrontendOnlineShop
 * https://github.com/radikalex/e-commerce-React
@@ -204,10 +204,11 @@ This space is made to list my favourites SOCIAL NETWORK projects that I have exp
 ## Contact 
 
   <p align="center">
+  Sergio Cano
 <a href = "mailto:sergiocano.design@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
     <a href="https://www.linkedin.com/in/sergiocano-frontend-backend-mern/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
 </p>
-
+Miguel Herrera
 <a href = "mailto:mirkouda@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
     <a href="https://www.linkedin.com/in/mherrevi/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
 </p>
