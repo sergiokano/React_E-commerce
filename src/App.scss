@@ -1,19 +1,27 @@
 @import "//db.onlinewebfonts.com/c/23255fa3ff7a89589800cea3092f154f?family=NB+International";
 
+@font-face {
+  font-family: newYork;
+  src: url(./private-resources/NewYork.otf);
+}
+
+
+
 // OPTION 1 ///////////////////////////////////////////////////////////////////////////////////////////////////
 $font-text: "NB International";
-$color-text: rgb(255, 255, 255);
-
-$background-1: rgb(77, 77, 77);
-$background-gradient: linear-gradient(to right, #ffd395, #d32f6b);
-$background-gradient2: -webkit-linear-gradient(to right, #ffc371, #ff5f6d);
-$background-gradient3: #ff5f6d;
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$font-text-styled: "newYork";
 
 
+$color-text: #47311d;
 
-
-Body {
+$background-1: white;
+$background-2: #F2ECE8;
+$background-3: #F3F0EE;
+  // $background-gradient: linear-gradient(to right, #ffd395, #d32f6b);
+  // $background-gradient2: -webkit-linear-gradient(to right, #ffc371, #ff5f6d);
+  // $background-gradient3: #ff5f6d;
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  Body {
   background: $background-1;
 
   // background: $background-gradient3;

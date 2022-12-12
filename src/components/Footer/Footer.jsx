@@ -7,6 +7,7 @@ import logo from "../../img/logo_freshly.png"
 
 function Footer() {
   return (
+    <div className="footerFull">
     <div className="footer">
       <div className="top">
         <div className="item">
@@ -60,6 +61,7 @@ function Footer() {
           <img src={paymentImg} alt="" />
         </div>
       </div>
+    </div>
     </div>
   );
 }

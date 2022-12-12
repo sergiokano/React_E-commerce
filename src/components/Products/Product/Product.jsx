@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { ProductsContext } from "../../../context/ProductsContext/ProductsState";
 import "./Product.scss";
 import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons";
+import FeaturedProducts from "../../FeaturedProducts/FeaturedProducts";
 
 const Product = () => {
   const { id } = useParams();
@@ -19,39 +20,48 @@ const Product = () => {
   }, []);
 
   return (
-    <div className="product">
-      <div className="left">
-        <div className="images">
-          <img src={images[0]} alt="" onClick={(e) => setSelectedImage(0)} />
-          <img src={images[1]} alt="" onClick={(e) => setSelectedImage(1)} />
+    <div className="test2">
+      <div className="product">
+        <div className="left">
+          <div className="images">
+            <img src={images[0]} alt="" onClick={(e) => setSelectedImage(0)} />
+            <img src={images[1]} alt="" onClick={(e) => setSelectedImage(1)} />
+          </div>
+          <div className="mainImage">
+            <img src={images[selectedImage]} alt="" />
+          </div>
         </div>
-        <div className="mainImage">
-          <img src={images[selectedImage]} alt="" />
+        <div className="right">
+          <div className="test">
+            <h2>{product.name}</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <span>{product.price}</span>
+            <br />
+            <br />
+
+            <div className="quantity">
+              <button
+                onClick={() =>
+                  setQuantity((prev) => (prev === 1 ? 1 : prev - 1))
+                }
+              >
+                -
+              </button>
+              {quantity}
+              <button onClick={() => setQuantity((prev) => prev + 1)}>+</button>
+
+              <button className="item">
+                <HeartOutlined />
+              </button>
+              <button className="item" onClick={() => addCart(product)}>
+                <ShoppingCartOutlined />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="right">
-        <h2>{product.name}</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <span>{product.price}</span>
-        <br />
-        <br />
-
-        <div className="quantity">
-          <button
-            onClick={() => setQuantity((prev) => (prev === 1 ? 1 : prev - 1))}
-          >
-            -
-          </button>
-          {quantity}
-          <button onClick={() => setQuantity((prev) => prev + 1)}>+</button>
-
-          <button className="item">
-            <HeartOutlined />
-          </button>
-          <button className="item" onClick={() => addCart(product)}>
-            <ShoppingCartOutlined />
-          </button>
-        </div>
+      <div className="RRSS">
+        
       </div>
     </div>
   );

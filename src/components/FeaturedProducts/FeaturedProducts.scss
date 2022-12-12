@@ -1,7 +1,12 @@
+@import "../../App.scss";
+
+
 .FeaturedProducts{
-    margin: 100px 200px;
-    
+    background-color: $background-3;
+    font: 100% $font-text;
+    color: $color-text;
     .top{
+        margin: 100px 200px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -11,11 +16,12 @@
             text-transform: capitalize;
         }
         p{
+            margin-top: 50px;
             flex:3;
             color: yellow;
         }
     }
-
+    
     .bottom{
         display: flex;
         justify-content: center;

@@ -15,7 +15,7 @@ import { Badge } from "antd";
 import "./Header.scss";
 
 import { ProductsContext } from "../../context/ProductsContext/ProductsState";
-import logo from "../../img/logo_freshly.png";
+import logo from "../../img/logo_freshly_brown.png";
 
 const Header = () => {
   const { token, logout } = useContext(UserContext);

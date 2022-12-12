@@ -4,7 +4,7 @@ import "./Card.scss";
 
 const Card = ({ item }) => {
   const isDiscounted =
-    item.price < item.oldPrice ? <span>Discounted</span> : <span></span>;
+    item.price < item.oldPrice ? <span>Discounted</span> : <noscript></noscript>;
 
   const createdAtFormat = item.createdAt.slice(0, 7).replace("-", ""); 
 
