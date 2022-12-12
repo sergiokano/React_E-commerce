@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.scss";
 // import { Link } from "react-router-dom";
 import paymentImg from "../../img/payment.png";
-import logo from "../../img/logo_freshly.png"
+import logo from "../../img/logo_freshly_brown.png"
 
 
 function Footer() {
