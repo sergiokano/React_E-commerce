@@ -25,7 +25,7 @@ function Footer() {
           <span>Cookies</span>
         </div>
         <div className="item">
-          <h1>Únete al Freshly</h1>
+          <h1>Únete a Freshly</h1>
           <span>
             Opiniones
           </span>
