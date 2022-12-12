@@ -1,15 +1,5 @@
 import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-// import { Menu } from "antd";
-// import {
-//   HomeOutlined,
-//   UserOutlined,
-//   UserAddOutlined,
-//   LogoutOutlined,
-//   LoginOutlined,
-//   ShopOutlined,
-//   ShoppingCartOutlined,
-// } from "@ant-design/icons";
 import { Input } from 'antd';
 import { HeartOutlined, ShoppingOutlined } from "@ant-design/icons";
 import { UserContext } from "../../context/UserContext/UserState";
@@ -23,7 +13,6 @@ import { useState } from "react";
 const Header = () => {
   const { token, logout } = useContext(UserContext);
   const { cart } = useContext(ProductsContext);
-  // const[query, setQuery] = useState("");
   const navigate = useNavigate();
   const onLogout = () => {
     logout();
@@ -90,22 +79,6 @@ const Header = () => {
           </>
         )}
       </ul>
-      <div className="search-bar">
-        <Input style={{
-          size: "small",
-          border: "1px solid gray",
-          background: "transparent",
-          color: "lightGray",
-        }}
-        placeholder="Search cosmetic..."
-        // onChange={(e) => setQuery(e.target.value)} 
-        />
-        {/* <ul className="lis">
-        {Products.map((product)=>(
-          <li className="listItem">{product.name}</li>
-        ))}
-        </ul> */}
-      </div>
     </nav>
   );
 };

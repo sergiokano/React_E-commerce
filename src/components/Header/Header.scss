@@ -31,15 +31,16 @@ li {
     justify-content: space-between;
     padding-right: 0.5em;
     align-items: center;
+    align-self: center;
     // border: blue 1px solid;
     //   flex-wrap: nowrap;
     li {
+      transition-timing-function: ease-in-out;
+      transition: background-color 0.6s,  translate 0.6s, transform 0.6s, color 0.5s;
       &:hover {
+        color:  $background-lemon;
         transform: translateY(-3px);
-        transition-duration: 0.5s;
-        color: $color-hover;
-        text-shadow: 0 0 5px $background-orange;
-        // box-shadow: 
+        text-shadow: 0 0 0.5px $color-shadow;
       }
     }
     .menu-vertical {
