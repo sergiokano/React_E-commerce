@@ -16,6 +16,11 @@ const products = (state, action) => {
         return {
           ...state,
           cart: [action.payload, ...state.cart],
+        };
+        case "ADD_WISHLIST":
+        return {
+          ...state,
+          cart: [action.payload, ...state.wishlist],
         }
         case "CLEAR_CART":
           return {

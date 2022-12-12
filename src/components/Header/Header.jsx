@@ -10,24 +10,30 @@ import { Link, useNavigate } from "react-router-dom";
 //   ShopOutlined,
 //   ShoppingCartOutlined,
 // } from "@ant-design/icons";
+import { Input } from 'antd';
+import { HeartOutlined, ShoppingOutlined } from "@ant-design/icons";
 import { UserContext } from "../../context/UserContext/UserState";
 import { Badge } from "antd";
 import "./Header.scss";
-
 import { ProductsContext } from "../../context/ProductsContext/ProductsState";
 import logo from "../../img/logo_freshly_brown.png";
+import Products from "../Products/Products";
+import { useState } from "react";
 
 const Header = () => {
   const { token, logout } = useContext(UserContext);
   const { cart } = useContext(ProductsContext);
+  // const[query, setQuery] = useState("");
   const navigate = useNavigate();
   const onLogout = () => {
     logout();
     navigate("/");
   };
+
   return (
     <nav className="container-header">
       <img className="logo" src={logo} alt="logo freshly cosmetics" />
+
       <ul className="navbar">
         <li>
           <Link to="/">Home</Link>
@@ -59,6 +65,11 @@ const Header = () => {
             color="none"
           ></Badge>
         </li>
+        <li>
+          <Link to="/wishlist">
+            <span class="material-icons"><HeartOutlined /></span>
+          </Link>{" "}
+        </li>
 
         {token ? (
           <>
@@ -85,6 +96,22 @@ const Header = () => {
           </>
         )}
       </ul>
+      <div className="search-bar">
+        <Input style={{
+          size: "small",
+          border: "1px solid gray",
+          background: "transparent",
+          color: "lightGray",
+        }}
+        placeholder="Search cosmetic..."
+        // onChange={(e) => setQuery(e.target.value)} 
+        />
+        {/* <ul className="lis">
+        {Products.map((product)=>(
+          <li className="listItem">{product.name}</li>
+        ))}
+        </ul> */}
+      </div>
     </nav>
   );
 };

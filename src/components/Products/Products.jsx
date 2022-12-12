@@ -1,49 +1,69 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { ProductsContext } from "../../context/ProductsContext/ProductsState";
 import { Card, Button } from "antd";
-// import "./Products.css";
-import { ShoppingCartOutlined } from "@ant-design/icons";
+import "./Products.scss";
+import { ShoppingOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import "./Products.scss"
 
 
+
 const Products = () => {
   const { products, getProducts, addCart, cart } = useContext(ProductsContext);
-  useEffect(() => {
-    getProducts();
-  }, []);
-  useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cart));
-  }, [cart]);
+  const [selectedImage] = useState(0);
+  const images = [
+    "https://cdn.shopify.com/s/files/1/0574/0127/8625/products/Wildsmith_EyeSerum_HR_bae48101-5214-4b44-97aa-6b4570fc666b_1000x.png?v=1623667289",
+  ];
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
+    getProducts();
   }, [cart]);
 
   return (
-    <div className="container-products">
+    <div className="products-card">
       <p>Our latest products</p>
+    <div className="container-products">
       {products?.map((product) => {
         return (
-          console.log(product),
-          <div key={product.id} className="site-card-border-less-wrapper z-index">
-            <Card
-              title={product.name}
-              bordered={true}
-              style={{
-                width: 300,
-                border: "1px solid lightGray",
-              }}
-            >
-              <p>{product.price} €</p>
-              <Button onClick={() => addCart(product)}>
-                Add to Cart <ShoppingCartOutlined />
-              </Button>
-              <Button><Link to={'product/'+product.id}>Ver producto</Link></Button>
-            </Card>
-          </div>
-        );
+          <div >
+            <div key={product.id} className="site-card-border-less-wrapper z-index">
+              <br />
+              <div className="card-sass">
+                <Card
+                  title={product.name}
+                  bordered={true}
+                  style={{
+                    width: 300,
+                    border: "1px solid gray",
+                    background: "transparent",
+                    color: "lightGray",
+                  }}
+                >
+                  <img src={images[selectedImage]} alt="" width={250}/>
+                  <p>{product.price}</p>
+                  <Button style={{
+                    size: "small",
+                    border: "1px solid gray",
+                    background: "transparent",
+                    color: "lightGray",
+                  }}
+                    onClick={() => addCart(product)}>
+                    <ShoppingOutlined />
+                  </Button>
+                  <Button style={{
+                    size: "small",
+                    border: "1px solid gray",
+                    background: "transparent",
+                    color: "lightGray",
+                    margin: "10px"
+                  }}><Link to={'product/' + product.id}>See product</Link></Button>
+                </Card>
+              </div>
+            </div>
+          </div>);
       })}
+    </div>
     </div>
   );
 };

@@ -1,0 +1,17 @@
+.products-card {
+    color: lightgray;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    .container-products {
+        color: lightgray;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+
+    }
+}
