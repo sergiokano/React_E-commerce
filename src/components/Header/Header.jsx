@@ -1,29 +1,14 @@
 import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-// import { Menu } from "antd";
-// import {
-//   HomeOutlined,
-//   UserOutlined,
-//   UserAddOutlined,
-//   LogoutOutlined,
-//   LoginOutlined,
-//   ShopOutlined,
-//   ShoppingCartOutlined,
-// } from "@ant-design/icons";
-import { Input } from 'antd';
-import { HeartOutlined, ShoppingOutlined } from "@ant-design/icons";
 import { UserContext } from "../../context/UserContext/UserState";
 import { Badge } from "antd";
 import "./Header.scss";
 import { ProductsContext } from "../../context/ProductsContext/ProductsState";
 import logo from "../../img/logo_freshly.png";
-import Products from "../Products/Products";
-import { useState } from "react";
 
 const Header = () => {
   const { token, logout } = useContext(UserContext);
   const { cart } = useContext(ProductsContext);
-  // const[query, setQuery] = useState("");
   const navigate = useNavigate();
   const onLogout = () => {
     logout();
@@ -33,12 +18,10 @@ const Header = () => {
   return (
     <nav className="container-header">
       <img className="logo" src={logo} alt="logo freshly cosmetics" />
-
       <ul className="navbar">
         <li>
           <Link to="/">Home</Link>
         </li>
-
         <li className="products">
           <div className="menu-vertical">
             <ul className="menu-vertical-container">
@@ -65,12 +48,6 @@ const Header = () => {
             color="none"
           ></Badge>
         </li>
-        <li>
-          <Link to="/wishlist">
-            <span class="material-icons"><HeartOutlined /></span>
-          </Link>{" "}
-        </li>
-
         {token ? (
           <>
             <li>
@@ -78,7 +55,7 @@ const Header = () => {
                 <span class="material-icons">person</span>
               </Link>{" "}
             </li>
-            <li>
+            <li onClick={onLogout}>
               <Link to="/logout">
                 <span class="material-icons">logout</span>
               </Link>{" "}
@@ -96,22 +73,6 @@ const Header = () => {
           </>
         )}
       </ul>
-      <div className="search-bar">
-        <Input style={{
-          size: "small",
-          border: "1px solid gray",
-          background: "transparent",
-          color: "lightGray",
-        }}
-        placeholder="Search cosmetic..."
-        // onChange={(e) => setQuery(e.target.value)} 
-        />
-        {/* <ul className="lis">
-        {Products.map((product)=>(
-          <li className="listItem">{product.name}</li>
-        ))}
-        </ul> */}
-      </div>
     </nav>
   );
 };

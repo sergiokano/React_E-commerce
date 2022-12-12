@@ -14,7 +14,6 @@ import { OrderProvider } from "./context/OrdersContext/OrderState";
 import Cart from "./components/Cart/Cart";
 import Product from "./components/Products/Product/Product";
 import NoMatch from "./components/NoMatch/NoMatch";
-import Wishlist from "./components/Wishlist/Wishlist";
 import About from "./components/About/About";
 
 
@@ -35,7 +34,6 @@ function App() {
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/wishlist" element={<Wishlist />} />
                 <Route path="/products/product/:id" element={<Product />} />
                 <Route path="*" element={<NoMatch />} />
               </Routes>
