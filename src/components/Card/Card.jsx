@@ -4,9 +4,13 @@ import "./Card.scss";
 
 const Card = ({ item }) => {
   const isDiscounted =
-    item.price < item.oldPrice ? <span>Discounted</span> : <noscript></noscript>;
+    item.price < item.oldPrice ? (
+      <span>Discounted</span>
+    ) : (
+      <noscript></noscript>
+    );
 
-  const createdAtFormat = item.createdAt.slice(0, 7).replace("-", ""); 
+  const createdAtFormat = item.createdAt.slice(0, 7).replace("-", "");
 
   const newSeason =
     createdAtFormat > 202202 ? <span>newSeasonnn</span> : <noscript></noscript>;
@@ -21,10 +25,12 @@ const Card = ({ item }) => {
           <img src={item.img} alt="" className="mainImg" />
           <img src={item.img2} alt="" className="secondImg" />
         </div>
-        <h2>{item.title}</h2>
-        <div className="prices">
-          <h3>${item.oldPrice}</h3>
-          <h3>${item.price}</h3>
+        <div className="content-info">
+          <h2>{item.title}</h2>
+          <div className="prices">
+            <h3>${item.oldPrice}</h3>
+            <h3>${item.price}</h3>
+          </div>
         </div>
       </div>
     </Link>
