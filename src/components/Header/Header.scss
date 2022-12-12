@@ -5,6 +5,7 @@ li {
 }
 
 .container-header {
+  position: sticky;
   border-bottom: 1px $color-text solid;
   color: rgb(219, 224, 236);
   padding: 6px;
