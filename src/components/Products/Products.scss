@@ -1,12 +1,15 @@
+@import "../../App.scss";
+
+
 .products-card {
-    color: lightgray;
+    color: $color-text;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
 
     .container-products {
-        color: lightgray;
+        color: $color-text;
         display: flex;
         justify-content: space-around;
         flex-direction: row;

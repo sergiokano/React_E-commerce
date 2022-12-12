@@ -39,7 +39,7 @@ const Products = () => {
                       width: 300,
                       border: "1px solid gray",
                       background: "transparent",
-                      color: "lightGray",
+                      color: "#47311d",
                     }}
                   >
                     <img src={images[product.id]} alt="" width={250} />
@@ -48,7 +48,7 @@ const Products = () => {
                       size: "small",
                       border: "1px solid gray",
                       background: "transparent",
-                      color: "lightGray",
+                      color: "#47311d",
                     }}
                       onClick={() => addCart(product)}>
                       <ShoppingOutlined />
@@ -57,7 +57,7 @@ const Products = () => {
                       size: "small",
                       border: "1px solid gray",
                       background: "transparent",
-                      color: "lightGray",
+                      color: "#47311d",
                       margin: "10px"
                     }}><Link to={'product/' + product.id}>See product</Link></Button>
                   </Card>

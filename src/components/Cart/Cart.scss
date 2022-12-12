@@ -1,5 +1,7 @@
+@import "../../App.scss";
+
 .container-cart{
-    color: lightgray;
+    color: $color-text;
     display: flex;
     justify-content: space-around;
     flex-direction: column;

@@ -69,7 +69,13 @@ const Login = () => {
           }}
           className="button-container"
         >
-          <Button type="primary" htmlType="submit">
+          <Button style={{
+            size: "small",
+            border: "1px solid gray",
+            background: "transparent",
+            color: "#47311d",
+          }}
+           type="primary" htmlType="submit">
             Submit
           </Button>
         </Form.Item>

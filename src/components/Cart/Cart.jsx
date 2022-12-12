@@ -44,14 +44,14 @@ const Cart = () => {
             size: "small",
             border: "1px solid gray",
             background: "transparent",
-            color: "lightGray",
+            color: "#47311d",
           }}
             onClick={clearCart}>Clear</Button>
           <Button style={{
             size: "small",
             border: "1px solid gray",
             background: "transparent",
-            color: "lightGray",
+            color: "#47311d",
           }}
             onClick={() => createNewOrder()}>Buy <CreditCardOutlined /></Button>
         </div>

@@ -46,7 +46,7 @@ const Product = () => {
             size: "small",
             border: "1px solid gray",
             background: "transparent",
-            color: "lightGray",
+            color: "#47311d",
           }}
             className="item" onClick={() => addCart(product)}>
             <ShoppingOutlined />
