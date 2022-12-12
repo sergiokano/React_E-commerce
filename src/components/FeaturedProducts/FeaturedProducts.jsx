@@ -2,10 +2,7 @@ import React from 'react'
 import "./FeaturedProducts.scss"
 
 const FeaturedProducts = () => {
-    // const data
-
-
-  return (
+    return (
     <div className='FeaturedProducts'>FeaturedProducts</div>
   )
 }

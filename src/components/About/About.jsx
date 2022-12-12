@@ -22,7 +22,6 @@ const About = () => {
                     <br />
                     <br />
                     Cuida tu piel con la mejor cosmética natural de Freshly Cosmetics.</p>
-
                 <br />
             </div>
         </div>

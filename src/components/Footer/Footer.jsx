@@ -1,6 +1,5 @@
 import React from "react";
 import "./Footer.scss";
-// import { Link } from "react-router-dom";
 import paymentImg from "../../img/payment.png";
 import logo from "../../img/logo_freshly.png"
 
@@ -26,23 +25,44 @@ function Footer() {
           <span>Cookies</span>
         </div>
         <div className="item">
-          <h1>About</h1>
+          <h1>Únete al Freshly</h1>
           <span>
-            Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore.
+            Opiniones
+          </span>
+          <span>
+            Blog
+          </span>
+          <span>
+            ¡Únete al Freshly Club!
+          </span>
+          <span>
+            Black Friday
+          </span>
+          <span>
+            Freshly Days
           </span>
         </div>
         <div className="item">
           <h1>Contact</h1>
           <span>
-            Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore.
+            Lunes - Viernes
           </span>
+          <span>
+            9:00h -13h | 15:00h - 17:00h
+          </span>
+          <span>
+            676 932 595
+          </span>
+          <span>
+            mailhello@freshlycosmetics.com
+          </span>
+
+
         </div>
       </div>
       <div className="bottom">
         <div className="left">
-        <img className="logo" src={logo} alt="" />
+          <img className="logo" src={logo} alt="" />
           <span className="copyright">
             <span>© Copyright {new Date().getFullYear()}</span>
             <span> designed by </span>
