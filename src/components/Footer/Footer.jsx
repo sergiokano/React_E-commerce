@@ -25,15 +25,15 @@ function Footer() {
             <span>FAQS</span>
           </div>
           <div className="item">
-            <h1>Únete a Freshly</h1>
+            <h1>Join us</h1>
             <span>
-              Opiniones
+              Reviews
             </span>
             <span>
               Blog
             </span>
             <span>
-              ¡Únete al Freshly Club!
+              Join to Freshly Club!
             </span>
             <span>
               Black Friday
@@ -45,13 +45,13 @@ function Footer() {
           <div className="item">
             <h1>Contact</h1>
             <span>
-              Lunes - Viernes
+              Monday - Friday
             </span>
             <span>
               9:00h -13h | 15:00h - 17:00h
             </span>
             <span>
-              676 932 595
+             +34 676 932 595
             </span>
             <span>
               mailhello@freshlycosmetics.com
