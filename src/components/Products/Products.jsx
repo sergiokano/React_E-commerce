@@ -21,11 +21,12 @@ const Products = () => {
   }, [cart]);
 
   return (
-    <div className="container-products">
+    <div className="products-card">
       <p>Our latest products</p>
+    <div className="container-products">
       {products?.map((product) => {
         return (
-          <>
+          <div >
             <div key={product.id} className="site-card-border-less-wrapper z-index">
               <br />
               <div className="card-sass">
@@ -60,8 +61,9 @@ const Products = () => {
                 </Card>
               </div>
             </div>
-          </>);
+          </div>);
       })}
+    </div>
     </div>
   );
 };
