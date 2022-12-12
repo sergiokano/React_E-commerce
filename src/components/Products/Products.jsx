@@ -4,9 +4,7 @@ import { Card, Button } from "antd";
 import "./Products.scss";
 import { ShoppingOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
-import "./Products.scss"
-
-
+import "./Products.scss";
 
 const Products = () => {
   const { products, getProducts, addCart, cart } = useContext(ProductsContext);
@@ -24,14 +22,20 @@ const Products = () => {
 
   return (
     <div className="products-card">
-      <p>SERUMS
+      <p>
+        SERUMS
         <br />
-        SERUMS TO DELIVER DEEPLY PENETRATING HIGHLY CONCENTRATED ACTIVE INGREDIENTS</p>
+        SERUMS TO DELIVER DEEPLY PENETRATING HIGHLY CONCENTRATED ACTIVE
+        INGREDIENTS
+      </p>
       <div className="container-products">
         {products?.map((product) => {
           return (
-            <div >
-              <div key={product.id} className="site-card-border-less-wrapper z-index">
+            <div>
+              <div
+                key={product.id}
+                className="site-card-border-less-wrapper z-index"
+              >
                 <br />
                 <div className="card-sass">
                   <Card
@@ -45,27 +49,34 @@ const Products = () => {
                     }}
                   >
                     <img src={images[product.id]} alt="" width={250} />
-                    <p>{product.price}</p>
-                    <Button style={{
-                      size: "small",
-                      border: "1px solid gray",
-                      background: "transparent",
-                      color: "#47311d",
-                    }}
-                      onClick={() => addCart(product)}>
+                    <p>{product.price} €</p>
+                    <Button
+                      style={{
+                        size: "small",
+                        border: "1px solid gray",
+                        background: "transparent",
+                        color: "#47311d",
+                      }}
+                      onClick={() => addCart(product)}
+                    >
                       <ShoppingOutlined />
                     </Button>
-                    <Button style={{
-                      size: "small",
-                      border: "1px solid gray",
-                      background: "transparent",
-                      color: "#47311d",
-                      margin: "10px"
-                    }}><Link to={'product/' + product.id}>See product</Link></Button>
+                    <Button
+                      style={{
+                        size: "small",
+                        border: "1px solid gray",
+                        background: "transparent",
+                        color: "#47311d",
+                        margin: "10px",
+                      }}
+                    >
+                      <Link to={"product/" + product.id}>See product</Link>
+                    </Button>
                   </Card>
                 </div>
               </div>
-            </div>);
+            </div>
+          );
         })}
       </div>
     </div>

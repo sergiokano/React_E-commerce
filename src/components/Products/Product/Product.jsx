@@ -5,6 +5,7 @@ import { ProductsContext } from "../../../context/ProductsContext/ProductsState"
 import "./Product.scss";
 import { ShoppingOutlined } from "@ant-design/icons";
 import { Button } from "antd";
+import RRSS from "../../RRSS/RRSS";
 
 const Product = () => {
   const { id } = useParams();
@@ -22,6 +23,7 @@ const Product = () => {
   }, []);
 
   return (
+    <>
     <div className="product">
       <div className="left">
         <div className="images">
@@ -36,7 +38,7 @@ const Product = () => {
       <div className="right">
         <h2>{product.name}</h2>
         <p>{product.description}</p>
-        <span>{product.price}</span>
+        <span>{product.price} €</span>
         <br />
         <br />
 
@@ -65,6 +67,8 @@ const Product = () => {
         </div>
       </div>
     </div>
+      <RRSS/>
+    </>
   );
 };
 

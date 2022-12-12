@@ -1,10 +1,11 @@
+@import "../../../App.scss";
+
 .product {
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
   width: 100%;
-  color: lightgrey;
 
   .left {
     flex: 1;
@@ -23,7 +24,7 @@
     .mainImage {
       flex: 5;
       position: relative;
-      
+
       img {
         width: 100%;
         object-fit: cover;
@@ -36,8 +37,31 @@
     top: 0;
     align-self: flex-start;
     min-width: 500px;
-  }
+    h2 {
+      font: 300% $font-text-styled;
+      text-transform:capitalize;
+    }
+    p{
+      font: 150% $font-text;
+      text-transform:capitalize;
 
+    }
+    span{
+      font: 150% $font-text;
+      text-transform:capitalize;
+
+    }
+  }
+  .info{
+    font: 90% $font-text;
+    color: $color-shadow;
+
+  }
+  .details{
+    font: 80% $font-text;
+    color: $color-shadow;
+
+  }
 }
 .flex {
   display: flex;
