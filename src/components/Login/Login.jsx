@@ -34,7 +34,7 @@ const Login = () => {
         onFinish={onFinish}
         autoComplete="off"
         >
-        <p>Log in to see your account</p>
+        <p>LOGIN</p>
         <Form.Item
           label="Email"
           name="email"

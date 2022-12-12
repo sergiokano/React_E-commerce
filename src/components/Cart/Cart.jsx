@@ -25,7 +25,7 @@ const Cart = () => {
   return (
 
     <div className="container-cart">
-      <p>Your selected products</p>
+      <p>MY BASKET</p>
       <Card
         title={cartNames.name}
         bordered={true}

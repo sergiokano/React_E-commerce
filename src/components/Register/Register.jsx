@@ -31,7 +31,9 @@ const onFinish = (values) =>{
         onFinish={onFinish}
         autoComplete="off"
         >
-          <p>Create a new user</p>
+          <p>REGISTER
+            <br />
+To hear more about promotions, events and information on new products please register your e-mail address below</p>
         <Form.Item
           label="Name"
           name="name"
