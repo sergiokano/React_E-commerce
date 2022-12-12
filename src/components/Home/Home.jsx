@@ -1,6 +1,7 @@
 import React from "react";
 import FeaturedProducts from "../FeaturedProducts/FeaturedProducts";
 import Lore from "../Lore/Lore";
+import RRSS from "../RRSS/RRSS";
 import Slider from "../Slider/Slider";
 import "./Home.scss";
 
@@ -39,6 +40,7 @@ const Home = () => {
         </div>
       <FeaturedProducts type="featured" />
       <FeaturedProducts type="trending" />
+      <RRSS/>
     </div>
   );
 };
