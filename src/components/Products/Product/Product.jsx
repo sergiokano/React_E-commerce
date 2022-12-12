@@ -3,15 +3,14 @@ import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { ProductsContext } from "../../../context/ProductsContext/ProductsState";
 import "./Product.scss";
-import { HeartOutlined, ShoppingOutlined } from "@ant-design/icons";
+import { ShoppingOutlined } from "@ant-design/icons";
 import { Button } from "antd";
-import FeaturedProducts from "../../FeaturedProducts/FeaturedProducts";
 
 const Product = () => {
   const { id } = useParams();
-  const { product, getProduct, addCart, addWishlist } = useContext(ProductsContext);
+  const { product, getProduct, addCart } = useContext(ProductsContext);
   const [selectedImage, setSelectedImage] = useState(0);
-  const [quantity, setQuantity] = useState(0);
+
   const images = [
     "https://cdn.shopify.com/s/files/1/0574/0127/8625/products/Wildsmith_EyeSerum_HR_bae48101-5214-4b44-97aa-6b4570fc666b_1000x.png?v=1623667289",
     "   https://cdn.shopify.com/s/files/1/0574/0127/8625/products/Wildsmith_CopperPeptideSerum_HR_withaward_a688c81c-9e28-46d8-a494-4058fb535741_1000x.png?v=1623666511",

@@ -56,8 +56,6 @@ function Footer() {
             <span>
               mailhello@freshlycosmetics.com
             </span>
-
-
           </div>
         </div>
         <div className="bottom">
