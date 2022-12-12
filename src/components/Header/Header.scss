@@ -33,13 +33,22 @@ li {
     align-items: center;
     // border: blue 1px solid;
     //   flex-wrap: nowrap;
+    li {
+      &:hover {
+        transform: translateY(-3px);
+        transition-duration: 0.5s;
+        color: $color-hover;
+        text-shadow: 0 0 5px $background-orange;
+        // box-shadow: 
+      }
+    }
     .menu-vertical {
       text-align: start;
       // border: blue 1px solid;
       mix-blend-mode: multiply;
       // background-color: white;
       // color: white;
-      
+
       .menu-vertical-container {
         z-index: 999;
         display: none;
@@ -63,9 +72,9 @@ li {
       }
     }
     .products {
-    &:hover .menu-vertical-container {
-      display: flex;
-    }
+      &:hover .menu-vertical-container {
+        display: flex;
+      }
     }
   }
 }

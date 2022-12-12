@@ -1,0 +1,60 @@
+@import "../../App.scss";
+
+.lore {
+  display: flex;
+  justify-content: space-around;
+  .text {
+    font: 800% $font-text-styled;
+    color: $color-text;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    .p1 {
+      margin-left: -390px;
+      font: 120% $font-text-styled;
+      display: block;
+    
+      transition-timing-function: ease-in-out;
+      transition: background-color 2s,  translate 2s;
+    }
+    .p2 {
+      margin-left: -420px;
+      margin-top: -25px;
+      font: 110% $font-text-styled;
+      z-index: 2;
+    }
+    .p3 {
+      margin-left: 70px;
+      margin-top: -10px;
+      font: 90% $font-text-styled;
+    }
+    .p4 {
+      margin-left: -400px;
+      margin-top: -10px;
+      font: 110% $font-text-styled;
+      transition-timing-function: ease-out;
+      transition: background-color 3s, translate 3.5s;
+    }
+  }
+
+  .img {
+    margin-left: 49%;
+    height: 700px;
+
+    img {
+      height: 800px;
+      object-position: 0 -6vw;
+    }
+  }
+}
+html {
+  &:hover .p1 {
+    background-color: rgba(255, 240, 127, 0.5);
+    translate: -20px;
+  }
+  
+  &:hover .p4 {
+    background-color: rgba(255, 162, 112, 0.5);
+    translate: 0 20px;
+  }
+}
