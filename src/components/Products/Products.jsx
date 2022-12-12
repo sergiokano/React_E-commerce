@@ -5,6 +5,9 @@ import "./Products.scss";
 import { ShoppingOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import "./Products.scss";
+import Slider from "../Slider/Slider";
+import FeaturedProducts from "../FeaturedProducts/FeaturedProducts";
+import RRSS from "../RRSS/RRSS";
 
 const Products = () => {
   const { products, getProducts, addCart, cart } = useContext(ProductsContext);
@@ -21,10 +24,14 @@ const Products = () => {
   }, [cart]);
 
   return (
+    <>
     <div className="products-card">
-      <p>
+        <Slider/>
+
+      <p className="title">
         SERUMS
-        <br />
+        </p>
+       <p className="text">
         SERUMS TO DELIVER DEEPLY PENETRATING HIGHLY CONCENTRATED ACTIVE
         INGREDIENTS
       </p>
@@ -80,7 +87,11 @@ const Products = () => {
         })}
       </div>
     </div>
+    <FeaturedProducts type={"trending"}/>
+    <RRSS/>
+    </>
   );
+ 
 };
 
 export default Products;

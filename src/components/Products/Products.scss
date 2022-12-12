@@ -9,7 +9,13 @@
     flex-wrap: nowrap;
     align-items: center;
     text-align: center;
+    .title{
+        font: 300% $font-text-styled;
+    }
+    .text{
+        font: 100% $font-text;
 
+    }
     .container-products {
         color: $color-text;
         display: flex;

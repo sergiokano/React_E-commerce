@@ -13,7 +13,7 @@ const Card = ({ item }) => {
   const createdAtFormat = item.createdAt.slice(0, 7).replace("-", "");
 
   const newSeason =
-    createdAtFormat > 202202 ? <span>newSeasonnn</span> : <noscript></noscript>;
+    createdAtFormat > 202202 ? <span>New 2022 ✨🖤</span> : <noscript></noscript>;
 
   return (
     <Link to={`/product/${item.id}`}>
@@ -28,8 +28,8 @@ const Card = ({ item }) => {
         <div className="content-info">
           <h2>{item.title}</h2>
           <div className="prices">
-            <h3>${item.oldPrice}</h3>
-            <h3>${item.price}</h3>
+            <h3>{item.oldPrice}€</h3>
+            <h3>{item.price}€</h3>
           </div>
         </div>
       </div>
