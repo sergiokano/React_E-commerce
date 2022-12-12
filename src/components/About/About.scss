@@ -1,8 +1,10 @@
+@import "../../App.scss";
+
 .product {
     padding: 20px;
     display: flex;
     gap: 50px;
-    color: black;
+    color: $color-text;
   
     .left {
       flex: 1;
