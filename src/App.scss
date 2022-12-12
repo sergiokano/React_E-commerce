@@ -8,27 +8,21 @@
 $font-text: "NB International";
 $font-text-styled: "newYork";
 
-
-
 $color-text: #47311d;
 $color-text-shadow: #cdb8a4;
 
-$color-hover: #F3F0EE;
+$color-hover: #f3f0ee;
 $color-shadow: #d2cdc9;
 
-
-
 $background-1: white;
-$background-2: #F2ECE8;
-$background-3: #F3F0EE;
+$background-2: #f2ece8;
+$background-3: #f3f0ee;
 
-$background-lemon:rgba(255, 240, 127, 0.5);
+$background-lemon: rgba(255, 240, 127, 0.5);
 
 $background-orange: rgb(255, 162, 112);
 
-
-
-
-  Body {
+Body {
   background: $background-1;
 }
+

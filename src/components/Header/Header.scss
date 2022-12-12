@@ -4,8 +4,11 @@ li {
   all: unset;
 }
 
+Body {
+  margin-bottom: 500px;
+}
 .container-header {
-  position: sticky;
+
   border-bottom: 1px $color-text solid;
   color: rgb(219, 224, 236);
   padding: 6px;
@@ -17,6 +20,7 @@ li {
   width: 90%;
   justify-content: space-between;
   align-items: baseline;
+  z-index:99;
 
   .logo {
     display: flex;
