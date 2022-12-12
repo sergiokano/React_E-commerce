@@ -1,16 +1,21 @@
-.container-register{
-  color: lightgray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    form{
-      p{
-        text-align: center;
-      }
+@import "../../App.scss";
+
+.container-register {
+  color: $color-text;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  form {
+    p {
+      text-align: center;
     }
+  }
 }
-.button-container{
-    display: flex;
-    justify-content: center;
+
+.button-container {
+  display: flex;
+  justify-content: center;
 }

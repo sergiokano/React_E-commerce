@@ -5,10 +5,6 @@
   src: url(./private-resources/NewYork.otf);
 }
 
-
-
-
-// OPTION 1 ///////////////////////////////////////////////////////////////////////////////////////////////////
 $font-text: "NB International";
 $font-text-styled: "newYork";
 
@@ -30,16 +26,9 @@ $background-lemon:rgba(255, 240, 127, 0.5);
 
 $background-orange: rgb(255, 162, 112);
 
-FFA270  
 
-// $background-gradient: linear-gradient(to right, #ffd395, #d32f6b);
-  // $background-gradient2: -webkit-linear-gradient(to right, #ffc371, #ff5f6d);
-  // $background-gradient3: #ff5f6d;
-  //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
   Body {
   background: $background-1;
-
-  // background: $background-gradient3;
-  // background: $background-gradient2;
-  // background: $background-gradient;
 }

@@ -1,5 +1,7 @@
+@import "../../App.scss";
+
 .container-profile {
-    color: lightgray;
+    color: $color-text;
     display: flex;
     justify-content: center;
     align-items: center;

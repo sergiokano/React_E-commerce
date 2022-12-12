@@ -3,18 +3,19 @@ import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { ProductsContext } from "../../../context/ProductsContext/ProductsState";
 import "./Product.scss";
-import { HeartOutlined, ShoppingOutlined } from "@ant-design/icons";
+import { ShoppingOutlined } from "@ant-design/icons";
 import { Button } from "antd";
-import FeaturedProducts from "../../FeaturedProducts/FeaturedProducts";
 
 const Product = () => {
   const { id } = useParams();
-  const { product, getProduct, addCart, addWishlist } = useContext(ProductsContext);
+  const { product, getProduct, addCart } = useContext(ProductsContext);
   const [selectedImage, setSelectedImage] = useState(0);
-  const [quantity, setQuantity] = useState(0);
+
   const images = [
     "https://cdn.shopify.com/s/files/1/0574/0127/8625/products/Wildsmith_EyeSerum_HR_bae48101-5214-4b44-97aa-6b4570fc666b_1000x.png?v=1623667289",
-    "https://cdn.shopify.com/s/files/1/0574/0127/8625/products/Wildsmith_EyeSerum_Outer_HR_1000x.png?v=1623667289",
+    "   https://cdn.shopify.com/s/files/1/0574/0127/8625/products/Wildsmith_CopperPeptideSerum_HR_withaward_a688c81c-9e28-46d8-a494-4058fb535741_1000x.png?v=1623666511",
+    "https://cdn.shopify.com/s/files/1/0574/0127/8625/products/Wildsmith_PlatinumBooster_HR_1000x.png?v=1623666891",
+    "https://cdn.shopify.com/s/files/1/0574/0127/8625/products/TRPSD_61cb5ab5-316c-432e-bb10-ba56cc36141e_1000x.png?v=1652362413",
   ];
   useEffect(() => {
     getProduct(id);
@@ -24,8 +25,9 @@ const Product = () => {
     <div className="product">
       <div className="left">
         <div className="images">
-          <img src={images[0]} alt="" onClick={(e) => setSelectedImage(0)} />
           <img src={images[1]} alt="" onClick={(e) => setSelectedImage(1)} />
+          <img src={images[2]} alt="" onClick={(e) => setSelectedImage(2)} />
+          <img src={images[3]} alt="" onClick={(e) => setSelectedImage(3)} />
         </div>
         <div className="mainImage">
           <img src={images[selectedImage]} alt="" />
@@ -43,35 +45,7 @@ const Product = () => {
             size: "small",
             border: "1px solid gray",
             background: "transparent",
-            color: "lightGray",
-          }}
-            onClick={() => setQuantity((prev) => (prev === 1 ? 1 : prev - 1))}
-          >
-            -
-          </Button>
-          {quantity}
-          <Button style={{
-            size: "small",
-            border: "1px solid gray",
-            background: "transparent",
-            color: "lightGray",
-          }}
-            onClick={() => setQuantity((prev) => prev + 1)}>+</Button>
-
-          <Button style={{
-            size: "small",
-            border: "1px solid gray",
-            background: "transparent",
-            color: "lightGray",
-          }}
-            className="item" onClick={() => addWishlist(product)}>
-            <HeartOutlined />
-          </Button>
-          <Button style={{
-            size: "small",
-            border: "1px solid gray",
-            background: "transparent",
-            color: "lightGray",
+            color: "#47311d",
           }}
             className="item" onClick={() => addCart(product)}>
             <ShoppingOutlined />

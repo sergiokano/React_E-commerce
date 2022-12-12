@@ -5,33 +5,33 @@ import { UserContext } from '../../context/UserContext/UserState'
 import "./Register.scss"
 
 const Register = () => {
-const {register} = useContext(UserContext)
-const navigate = useNavigate()
-const onFinish = (values) =>{
+  const { register } = useContext(UserContext)
+  const navigate = useNavigate()
+  const onFinish = (values) => {
     register(values)
     navigate("/login")
-}
+  }
 
-
-    
   return (
     <div className="container-register">
-        <Form
+      <Form
         name="basic"
         labelCol={{
-            span: 8,
+          span: 8,
         }}
         wrapperCol={{
-            span: 16,
+          span: 16,
         }}
         initialValues={{
-            remember: true,
+          remember: true,
         }}
-        
+
         onFinish={onFinish}
         autoComplete="off"
-        >
-          <p>Create a new user</p>
+      >
+        <p>REGISTER
+          <br />
+          To hear more about promotions, events and information on new products please register your e-mail address below</p>
         <Form.Item
           label="Name"
           name="name"
@@ -109,7 +109,14 @@ const onFinish = (values) =>{
           }}
           className="button-container"
         >
-          <Button type="primary" htmlType="submit">
+          <Button
+            style={{
+              size: "small",
+              border: "1px solid gray",
+              background: "transparent",
+              color: "#47311d",
+            }}
+            type="primary" htmlType="submit">
             Submit
           </Button>
         </Form.Item>

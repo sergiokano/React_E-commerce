@@ -9,7 +9,6 @@ const Slider = () => {
     "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/73ec9d49126465.58abf5327afd8.jpg",
     "https://mir-s3-cdn-cf.behance.net/project_modules/fs/7433f3142607191.6269cb3e1436d.jpg",
     "https://mir-s3-cdn-cf.behance.net/project_modules/fs/35758f149741425.62ecc1e8b29cc.jpg",
-    // "https://www.freshlycosmetics.com/img/media/35/vitaminc_3_large_default.jpg?4901052dc6f00c59053f2cd5d2416f38",
   ];
 
   const prevSlide = () => {

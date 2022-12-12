@@ -1,5 +1,3 @@
-import { act } from "react-dom/test-utils";
-
 const products = (state, action) => {
   switch (action.type) {
     case "GET_PRODUCTS":
