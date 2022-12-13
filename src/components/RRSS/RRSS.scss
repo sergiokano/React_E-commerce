@@ -4,11 +4,13 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  overflow: hidden;
   .container-img {
     width: 300vw;
     height: 500px;
 
     img {
+  
       width: 100vw;
       height: 90%;
       object-fit: cover;
@@ -32,6 +34,7 @@
       border: 1px solid $color-shadow;
       transition: background-color 0.6s;
       div {
+     
         margin-top: 8px;
         height: 20px;
         font: 100% $font-text;

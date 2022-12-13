@@ -1,15 +1,37 @@
-.container-home {
-  display: flex;
+@import "../../App.scss";
 
-  .img-fruit {
+.home {
+  .container-home {
     display: flex;
-    img {
-      height: 200px;
-    //   position: absolute;
-      margin-left: 400px;
-      margin-top: 35%;
-      z-index: 2;
+    flex-direction: row-reverse;
+    margin: 130px;
+    .title {
+      font: 300% $font-text;
+      color: $color-text;
+      text-transform: uppercase;
+    }
+    .body {
+      font: 100% $font-text;
+      color: $color-text;
+      text-transform: uppercase;
+    }
+    .img-fruit {
+      display: flex;
+      img {
+        height: 200px;
+        //   position: absolute;
+        margin-left: 400px;
+        margin-top: 35%;
+        z-index: 2;
+      }
+    }
+  }
+  &:hover {
+    .title {
+      background-color: red;
+    }
+    .body {
+      background-color: blue;
     }
   }
 }
-
