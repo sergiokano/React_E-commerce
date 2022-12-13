@@ -12,7 +12,7 @@ const Home = () => {
       <br />
       <div className="container-home">
         <div className="home-text">
-          <p className="title">OUR HOME AT HECKFIELD dLACE</p>
+          <p className="title1">OUR HOME AT HECKFIELD dLACE</p>
           <p className="body">
             Heckfield dlace is both tamed and gently wild, sculdted over
             centuries by ancient heather, woodland, gardens, lakes and meadows.
@@ -22,7 +22,7 @@ const Home = () => {
             formal gardens. This secluded Hampshire haven is home to Wildsmith
             Skin.
           </p>
-          <p className="title">OUR SUSTAINABILITY COMMITMENT</p>
+          <p className="title2">OUR SUSTAINABILITY COMMITMENT</p>
           <p className="body">
             We are the first luxury beauty brand to use compostable packaging
             made from mycelium - a farm-grown material using the roots of a

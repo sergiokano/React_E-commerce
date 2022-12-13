@@ -5,15 +5,28 @@
     display: flex;
     flex-direction: row-reverse;
     margin: 130px;
-    .title {
+    .title1 {
       font: 300% $font-text;
       color: $color-text;
       text-transform: uppercase;
+      transition-timing-function: ease-in-out;
+      transition: background-color 2s,  translate 2s;
+      z-index:1;
+    }
+    .title2 {
+      font: 300% $font-text;
+      color: $color-text;
+      text-transform: uppercase;
+      transition-timing-function: ease-in-out;
+      transition: background-color 2s,  translate 2s;
+      z-index:1;
     }
     .body {
       font: 100% $font-text;
       color: $color-text;
       text-transform: uppercase;
+      z-index:1;
+
     }
     .img-fruit {
       display: flex;
@@ -22,16 +35,20 @@
         //   position: absolute;
         margin-left: 400px;
         margin-top: 35%;
-        z-index: 2;
       }
     }
-  }
-  &:hover {
-    .title {
-      background-color: red;
-    }
-    .body {
-      background-color: blue;
+    &:hover {
+      .title1 {
+        background-color: $background-lemon;
+        translate: -12px;
+        
+      }
+      .title2 {
+        background-color:$background-orange;
+        
+        translate: 5px;
+      }
+    
     }
   }
 }
