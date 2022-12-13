@@ -14,7 +14,7 @@ a {
     .top {
       display: flex;
       gap: 50px;
-      
+
       .item {
         margin-top: 30px;
         flex: 1;
@@ -23,6 +23,9 @@ a {
         gap: 10px;
         text-align: justify;
         font-size: 14px;
+        span {
+          cursor: pointer;
+        }
 
         h1 {
           font-size: 18px;
