@@ -188,7 +188,7 @@ This space is made to list my favourites E-COMMERCE projects that I have explore
 - Home general overview
 
 <!-- ![foto](./src/components/image/form.png) -->
-
+![gif](https://github.com/sergiokano/React_E-commerce/tree/main/assets/home.gif)
 
 - Products general overview
 
