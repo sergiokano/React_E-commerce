@@ -38,7 +38,7 @@ const Header = () => {
             count={cart.length}
             size="small"
             offset={[1, -10]}
-            color="none"
+            color="black"
           ></Badge>
         </li>
         {token ? (
