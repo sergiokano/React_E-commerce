@@ -10,45 +10,93 @@
       color: $color-text;
       text-transform: uppercase;
       transition-timing-function: ease-in-out;
-      transition: background-color 2s,  translate 2s;
-      z-index:1;
+      transition: background-color 2s, translate 2s;
+      z-index: 1;
     }
     .title2 {
       font: 300% $font-text;
       color: $color-text;
       text-transform: uppercase;
       transition-timing-function: ease-in-out;
-      transition: background-color 2s,  translate 2s;
-      z-index:1;
+      transition: background-color 2s, translate 2s;
+      z-index: 1;
     }
     .body {
       font: 100% $font-text;
       color: $color-text;
       text-transform: uppercase;
-      z-index:1;
-
+      z-index: 1;
     }
     .img-fruit {
       display: flex;
-      img {
+      .orange {
         height: 200px;
         //   position: absolute;
         margin-left: 400px;
-        margin-top: 35%;
+        margin-top: 40%;
+        transition: translate 2s;
+
       }
+      .girl {
+        height: 250px;
+        position: absolute;
+        margin-top: 25%;
+        transform: scaleX(-1);
+        transition: translate 3s;
+
+      }
+      .kiwi {
+        height: 250px;
+        width: 250px;
+        object-fit: cover;
+        object-position: -105px 0;
+
+        position: absolute;
+        margin-top: 40px;
+        margin-left: 10%;
+        transition: translate 4s;
+
+      }
+      .painted {
+        height: 110px;
+        width: 100%;
+        object-fit:cover;
+        object-position: 0 -20px;
+
+        position: absolute;
+        margin-top: 730px;
+        margin-left: -130px;
+        background-repeat:repeat-x;
+        opacity: 0.6;
+        transition: opacity 2s;
+
+      }
+   
     }
     &:hover {
       .title1 {
         background-color: $background-lemon;
         translate: -12px;
-        
       }
       .title2 {
-        background-color:$background-orange;
-        
+        background-color: $background-orange;
         translate: 5px;
       }
-    
+      .painted{
+        opacity:0.1;
+      }
+      .kiwi{
+        translate: 12px;
+
+      }
+      .girl{
+        translate: -8px;
+
+      }
+      .orange{
+        translate: 0 4px;
+
+      }
     }
   }
 }

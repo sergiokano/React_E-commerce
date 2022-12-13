@@ -40,11 +40,29 @@ const Home = () => {
         </div>
         <div className="img-fruit">
           <img
+            className="orange"
             src={
               "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/b26ad227425697.56364eb01637e.jpg"
             }
             alt="img"
           />
+          <img
+            className="girl"
+            src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/ff981217248897.562b791a8404a.jpg"
+            alt=""
+          />
+
+          <img
+            className="kiwi"
+            src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c548e831408183.57889b33ae27a.jpg"
+            alt=""
+          />
+           <img
+            className="painted"
+            src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c5f41736106647.570f5758664e7.jpg"
+            alt=""
+          />
+        
         </div>
       </div>
       <FeaturedProducts type="trending" />
