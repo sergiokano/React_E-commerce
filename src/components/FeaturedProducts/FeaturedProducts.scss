@@ -4,20 +4,23 @@
   background-color: $background-3;
   font: 100% $font-text;
   color: $color-text;
-    .top {
+  .top {
     margin: 100px 200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 50px;
     h1 {
+      margin-top: 50px;
+
       flex: 2;
       text-transform: capitalize;
     }
     p {
       margin-top: 50px;
       flex: 3;
-      color: yellow;
+      color: $color-shadow;
+      text-align: center;
     }
   }
 

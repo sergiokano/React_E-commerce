@@ -58,10 +58,7 @@ const FeaturedProducts = ({ type }) => {
       <div className="top">
         <h1>{type} products</h1>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
-          iusto ullam nisi error similique reiciendis quia voluptatibus illum
-          placeat sequi! Aut ratione magni nihil quia corporis distinctio minima
-          odio ad.
+          Most popular products in the last month.
         </p>
       </div>
       <div className="bottom">
