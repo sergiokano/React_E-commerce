@@ -84,9 +84,9 @@ In this project, an e-commerce is developed where users will register, log in, s
 
 ### Built With
 
-* [![Node][Node.JS]][Node.JS-url]
-* [![React][React]][React-url]
-* [![SASS][SASS]][SASS-url]
+ <img align="center" alt="Rafa-SASS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"><img align="center" alt="Rafa-React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
+  <img align="center" alt="Rafa-Node" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
+
 
 
 
@@ -187,16 +187,16 @@ This space is made to list my favourites E-COMMERCE projects that I have explore
 
 - Home general overview
 
-<!-- ![foto](./src/components/image/form.png) -->
+![foto](./src/components/image/form.png)
 ![gif](https://github.com/sergiokano/React_E-commerce/blob/main/assets/home-.gif)
 
 <!-- - Products general overview -->
 
-<!-- ![foto](./src/components/image/linknews.png) -->
+![foto](./src/components/image/linknews.png)
 
 <!-- - Product Single Page general overview -->
 
-<!-- ![foto](./src/components/image/linknews.png) -->
+![foto](./src/components/image/linknews.png)
 
 
 
@@ -220,38 +220,4 @@ Miguel Herrera
 
 Developed by [Sergio Cano](https://github.com/sergiokano) and [Miguel Herrera](https://github.com/miguelherreravillanueva)
 
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/sergiocano-dev
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[JWT]: https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens
-[JWT-url]: https://jwt.io/
-[Vercel]: https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white
-[Vercel-url]: https://vercel.com/
-[MongoDB]: https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white
-[MongoDB-url]: https://www.mongodb.com/es
-[Express.js]: https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB
-[Express.js-url]: https://expressjs.com/
-[Node.JS]: https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white
-[Node.JS-url]: https://nodejs.org/en/
-[SASS]: https://img.shields.io/badge/SASS-pink?style=for-the-badge&logo=SASS&logoColor=white
-[SASS-url]: https://sass-lang.com/
-[React]: https://img.shields.io/badge/React-219ebc?style=for-the-badge&logo=React&typoColor=fedcba&logoColor=white
-[React-url]: https://es.reactjs.org/
-
-
-[Postman]: https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white
-[Postman-url]: https://www.postman.com/
 
